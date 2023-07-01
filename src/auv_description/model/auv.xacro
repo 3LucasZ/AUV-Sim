@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="test">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="auv">
   <!-- var -->
-  <xacro:property name="cwd" value="/home/ubuntu/urdf"/>
+  <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
   <xacro:property name="PI" value="3.1415926535897931"/>
   <!-- incl -->
   <xacro:include filename="${cwd}/materials.xacro" />
+  <xacro:include filename="${cwd}/inertial_macros.xacro" />
   <!-- base -->
+  <link name="dummy">
+  </link>
   <link name="base_link">
     <inertial>
         <mass value="1.14395"/>
@@ -22,6 +25,10 @@
       </geometry>
     </collision>
   </link>
+  <joint name="dummy_joint" type="fixed">
+     <parent link="dummy"/>
+     <child link="base_link"/>
+  </joint>
   <gazebo reference='base_link'>
     <xacro:red/>
   </gazebo>
@@ -56,49 +63,26 @@
   <xacro:wheel name="fr" x="0.5" y="0.6"/>
 
   <!-- caster -->
-  <gazebo>
-    <frame name="caster_frame" attached_to='base_link'>
-      <pose>-0.8 0 -0.2 0 0 0</pose>
-    </frame>
-    <link name='caster_link'>
-      <pose relative_to='caster_frame'/>
-      <inertial>
-          <mass>1</mass>
-          <inertia>
-              <ixx>0.016</ixx>
-              <ixy>0</ixy>
-              <ixz>0</ixz>
-              <iyy>0.016</iyy>
-              <iyz>0</iyz>
-              <izz>0.016</izz>
-          </inertia>
-      </inertial>
-      <visual name="visual">
-          <geometry>
-              <sphere>
-                  <radius>0.2</radius>
-              </sphere>
-          </geometry>
-          <material>
-              <ambient>0.0 1 0.0 1</ambient>
-              <diffuse>0.0 1 0.0 1</diffuse>
-              <specular>0.0 1 0.0 1</specular>
-          </material>
-      </visual>
-      <collision name="collision">
-          <geometry>
-              <sphere>
-                  <radius>0.2</radius>
-              </sphere>
-          </geometry>
-      </collision>
-    </link>
-    <joint name='caster_joint' type='ball'>
-      <parent>base_link</parent>
-      <child>caster_link</child>
-    </joint>
-  </gazebo>
-
+  <link name="caster_link">
+    <xacro:inertial_sphere mass="0.1" radius="0.2">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_sphere>
+    <visual>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.2"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="caster_joint" type="fixed">
+    <origin xyz="-0.8 0 -0.2" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="caster_link"/>
+  </joint>
   <!-- plugins -->
   <gazebo>
     <plugin

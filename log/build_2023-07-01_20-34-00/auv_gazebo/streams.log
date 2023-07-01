@@ -1,0 +1,221 @@
+[0.157s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[0.182s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.297s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.297s] -- Searching for dependencies of ignition-plugin1
+[0.297s] -- Searching for <ignition-plugin1> component [register]
+[0.297s] -- Looking for ignition-plugin1-register -- found version 1.3.0
+[0.297s] -- Searching for dependencies of ignition-plugin1-register
+[0.297s] -- Looking for ignition-plugin1 - found
+[0.298s] 
+[0.298s] -- Looking for ignition-gazebo6 -- found version 6.11.0
+[0.298s] -- Searching for dependencies of ignition-gazebo6
+[0.298s] -- Looking for sdformat12 -- found version 12.5.0
+[0.298s] -- Searching for dependencies of sdformat12
+[0.301s] -- Checking for module 'tinyxml2'
+[0.316s] --   Found tinyxml2, version 9.0.0
+[0.355s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.355s] -- Searching for dependencies of ignition-math6
+[0.356s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.356s] -- Searching for dependencies of ignition-utils1
+[0.357s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.357s] -- Searching for dependencies of ignition-plugin1
+[0.357s] -- Searching for <ignition-plugin1> component [loader]
+[0.358s] -- Looking for ignition-plugin1-loader -- found version 1.3.0
+[0.358s] -- Searching for dependencies of ignition-plugin1-loader
+[0.359s] -- Searching for <ignition-plugin1> component [register]
+[0.359s] -- Looking for ignition-transport11 -- found version 11.2.0
+[0.360s] -- Searching for dependencies of ignition-transport11
+[0.401s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.405s] -- Checking for module 'libzmq >= 4'
+[0.415s] --   Found libzmq , version 4.3.4
+[0.447s] -- Checking for module 'uuid'
+[0.456s] --   Found uuid, version 2.37.2
+[0.481s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.481s] -- Searching for dependencies of ignition-utils1
+[0.481s] -- Searching for <ignition-utils1> component [cli]
+[0.481s] -- Looking for ignition-utils1-cli -- found version 1.4.0
+[0.482s] -- Searching for dependencies of ignition-utils1-cli
+[0.482s] -- Looking for ignition-msgs8 -- found version 8.6.0
+[0.482s] -- Searching for dependencies of ignition-msgs8
+[0.506s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.525s] -- Searching for <ignition-transport11> component [log]
+[0.525s] -- Looking for ignition-transport11-log -- found version 11.2.0
+[0.526s] -- Searching for dependencies of ignition-transport11-log
+[0.526s] -- Looking for ignition-msgs8 -- found version 8.6.0
+[0.526s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.527s] -- Searching for dependencies of ignition-common4
+[0.527s] -- Looking for dlfcn.h - found
+[0.527s] -- Looking for libdl - found
+[0.534s] -- Searching for <ignition-common4> component [profiler]
+[0.534s] -- Looking for ignition-common4-profiler -- found version 4.5.2
+[0.535s] -- Searching for dependencies of ignition-common4-profiler
+[0.535s] -- Searching for <ignition-common4> component [events]
+[0.537s] -- Looking for ignition-common4-events -- found version 4.5.2
+[0.537s] -- Searching for dependencies of ignition-common4-events
+[0.537s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.537s] -- Searching for <ignition-common4> component [av]
+[0.537s] -- Looking for ignition-common4-av -- found version 4.5.2
+[0.538s] -- Searching for dependencies of ignition-common4-av
+[0.541s] -- Checking for module 'libswscale'
+[0.552s] --   Found libswscale, version 5.9.100
+[0.583s] -- Checking for module 'libavdevice >= 56.4.100'
+[0.595s] --   Found libavdevice , version 58.13.100
+[0.626s] -- Checking for module 'libavformat'
+[0.635s] --   Found libavformat, version 58.76.100
+[0.664s] -- Checking for module 'libavcodec'
+[0.680s] --   Found libavcodec, version 58.134.100
+[0.710s] -- Checking for module 'libavutil'
+[0.719s] --   Found libavutil, version 56.70.100
+[0.744s] -- Looking for ignition-fuel_tools7 -- found version 7.1.0
+[0.744s] -- Searching for dependencies of ignition-fuel_tools7
+[0.778s] -- Checking for module 'jsoncpp'
+[0.788s] --   Found jsoncpp, version 1.9.5
+[0.816s] -- Checking for module 'libzip'
+[0.826s] --   Found libzip, version 1.7.3
+[0.850s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.850s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.850s] -- Looking for ignition-msgs8 -- found version 8.6.0
+[0.851s] -- Looking for ignition-gui6 -- found version 6.6.1
+[0.851s] -- Searching for dependencies of ignition-gui6
+[0.877s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.878s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.878s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.878s] -- Looking for ignition-transport11 -- found version 11.2.0
+[0.879s] -- Looking for ignition-rendering6 -- found version 6.5.1
+[0.879s] -- Searching for dependencies of ignition-rendering6
+[0.879s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.879s] -- Searching for dependencies of ignition-math6
+[0.879s] -- Searching for <ignition-math6> component [eigen3]
+[0.880s] -- Looking for ignition-math6-eigen3 -- found version 6.12.0
+[0.880s] -- Searching for dependencies of ignition-math6-eigen3
+[0.881s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.881s] -- Searching for dependencies of ignition-common4
+[0.881s] -- Looking for dlfcn.h - found
+[0.881s] -- Looking for libdl - found
+[0.887s] -- Searching for <ignition-common4> component [graphics]
+[0.887s] -- Looking for ignition-common4-graphics -- found version 4.5.2
+[0.888s] -- Searching for dependencies of ignition-common4-graphics
+[0.888s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.888s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.889s] -- Searching for <ignition-common4> component [events]
+[0.889s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.889s] -- Searching for dependencies of ignition-plugin1
+[0.889s] -- Searching for <ignition-plugin1> component [all]
+[0.890s] -- Looking for all libraries of ignition-plugin1 -- found version 1.3.0
+[0.890s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.891s] -- Looking for ignition-msgs8 -- found version 8.6.0
+[0.901s] -- Looking for ignition-physics5 -- found version 5.2.0
+[0.901s] -- Searching for dependencies of ignition-physics5
+[0.902s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.902s] -- Looking for ignition-plugin1 -- found version 1.3.0
+[0.902s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.903s] -- Searching for <ignition-physics5> component [heightmap]
+[0.903s] -- Looking for ignition-physics5-heightmap -- found version 5.2.0
+[0.903s] -- Searching for dependencies of ignition-physics5-heightmap
+[0.904s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.904s] -- Searching for <ignition-physics5> component [mesh]
+[0.904s] -- Looking for ignition-physics5-mesh -- found version 5.2.0
+[0.904s] -- Searching for dependencies of ignition-physics5-mesh
+[0.905s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.905s] -- Searching for <ignition-physics5> component [sdf]
+[0.905s] -- Looking for ignition-physics5-sdf -- found version 5.2.0
+[0.905s] -- Searching for dependencies of ignition-physics5-sdf
+[0.906s] -- Looking for sdformat12 -- found version 12.5.0
+[0.906s] -- Looking for ignition-sensors6 -- found version 6.6.0
+[0.907s] -- Searching for dependencies of ignition-sensors6
+[0.929s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.929s] -- Looking for ignition-common4 -- found version 4.5.2
+[0.929s] -- Looking for ignition-transport11 -- found version 11.2.0
+[0.930s] -- Looking for ignition-rendering6 -- found version 6.5.1
+[0.930s] -- Looking for ignition-msgs8 -- found version 8.6.0
+[0.930s] -- Looking for sdformat12 -- found version 12.5.0
+[0.931s] -- Searching for <ignition-sensors6> component [air_pressure]
+[0.931s] -- Looking for ignition-sensors6-air_pressure -- found version 6.6.0
+[0.931s] -- Searching for dependencies of ignition-sensors6-air_pressure
+[0.931s] -- Searching for <ignition-sensors6> component [altimeter]
+[0.932s] -- Looking for ignition-sensors6-altimeter -- found version 6.6.0
+[0.932s] -- Searching for dependencies of ignition-sensors6-altimeter
+[0.932s] -- Searching for <ignition-sensors6> component [imu]
+[0.932s] -- Looking for ignition-sensors6-imu -- found version 6.6.0
+[0.933s] -- Searching for dependencies of ignition-sensors6-imu
+[0.933s] -- Searching for <ignition-sensors6> component [force_torque]
+[0.933s] -- Looking for ignition-sensors6-force_torque -- found version 6.6.0
+[0.934s] -- Searching for dependencies of ignition-sensors6-force_torque
+[0.934s] -- Searching for <ignition-sensors6> component [logical_camera]
+[0.934s] -- Looking for ignition-sensors6-logical_camera -- found version 6.6.0
+[0.934s] -- Searching for dependencies of ignition-sensors6-logical_camera
+[0.935s] -- Searching for <ignition-sensors6> component [magnetometer]
+[0.935s] -- Looking for ignition-sensors6-magnetometer -- found version 6.6.0
+[0.935s] -- Searching for dependencies of ignition-sensors6-magnetometer
+[0.935s] -- Searching for <ignition-sensors6> component [navsat]
+[0.936s] -- Looking for ignition-sensors6-navsat -- found version 6.6.0
+[0.936s] -- Searching for dependencies of ignition-sensors6-navsat
+[0.936s] -- Searching for <ignition-sensors6> component [rendering]
+[0.937s] -- Looking for ignition-sensors6-rendering -- found version 6.6.0
+[0.937s] -- Searching for dependencies of ignition-sensors6-rendering
+[0.937s] -- Searching for <ignition-sensors6> component [lidar]
+[0.937s] -- Looking for ignition-sensors6-lidar -- found version 6.6.0
+[0.938s] -- Searching for dependencies of ignition-sensors6-lidar
+[0.938s] -- Searching for <ignition-sensors6> component [gpu_lidar]
+[0.938s] -- Looking for ignition-sensors6-gpu_lidar -- found version 6.6.0
+[0.938s] -- Searching for dependencies of ignition-sensors6-gpu_lidar
+[0.939s] -- Searching for <ignition-sensors6> component [camera]
+[0.939s] -- Looking for ignition-sensors6-camera -- found version 6.6.0
+[0.939s] -- Searching for dependencies of ignition-sensors6-camera
+[0.940s] -- Searching for <ignition-sensors6> component [boundingbox_camera]
+[0.940s] -- Looking for ignition-sensors6-boundingbox_camera -- found version 6.6.0
+[0.940s] -- Searching for dependencies of ignition-sensors6-boundingbox_camera
+[0.940s] -- Searching for <ignition-sensors6> component [segmentation_camera]
+[0.941s] -- Looking for ignition-sensors6-segmentation_camera -- found version 6.6.0
+[0.941s] -- Searching for dependencies of ignition-sensors6-segmentation_camera
+[0.942s] -- Searching for <ignition-sensors6> component [depth_camera]
+[0.942s] -- Looking for ignition-sensors6-depth_camera -- found version 6.6.0
+[0.942s] -- Searching for dependencies of ignition-sensors6-depth_camera
+[0.942s] -- Searching for <ignition-sensors6> component [rgbd_camera]
+[0.943s] -- Looking for ignition-sensors6-rgbd_camera -- found version 6.6.0
+[0.943s] -- Searching for dependencies of ignition-sensors6-rgbd_camera
+[0.943s] -- Searching for <ignition-sensors6> component [thermal_camera]
+[0.944s] -- Looking for ignition-sensors6-thermal_camera -- found version 6.6.0
+[0.944s] -- Searching for dependencies of ignition-sensors6-thermal_camera
+[0.944s] -- Looking for ignition-rendering6 -- found version 6.5.1
+[0.945s] -- Looking for ignition-math6 -- found version 6.12.0
+[0.945s] -- Looking for ignition-utils1 -- found version 1.4.0
+[0.967s] -- Looking for ignition-gazebo6 - found
+[0.967s] 
+[1.008s] -- Configuring done
+[1.011s] [33mCMake Warning (dev) at CMakeLists.txt:14 (add_library):
+[1.011s]   Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+[1.011s]   "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+[1.011s]   command to set the policy and suppress this warning.
+[1.011s] 
+[1.011s]   File:
+[1.011s] 
+[1.011s]     /home/ubuntu/dev_ws/src/auv_gazebo/src/HelloWorld.cc
+[1.011s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.011s] [0m
+[1.017s] -- Generating done
+[1.019s] -- Build files have been written to: /home/ubuntu/dev_ws/build/auv_gazebo
+[1.043s] [35m[1mConsolidate compiler generated dependencies of target HelloWorld[0m
+[1.061s] [100%] Built target HelloWorld
+[1.071s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[1.097s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_gazebo
+[1.103s] -- Install configuration: ""
+[1.103s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds
+[1.103s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/world.sdf
+[1.103s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/hello_world_plugin.sdf
+[1.103s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/package_run_dependencies/auv_gazebo
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/parent_prefix_path/auv_gazebo
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/ament_prefix_path.sh
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/ament_prefix_path.dsv
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/path.sh
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/path.dsv
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.bash
+[1.104s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.sh
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.zsh
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.dsv
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/package.dsv
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/packages/auv_gazebo
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/cmake/auv_gazeboConfig.cmake
+[1.105s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/cmake/auv_gazeboConfig-version.cmake
+[1.106s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/package.xml
+[1.107s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_gazebo

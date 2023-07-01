@@ -1,0 +1,296 @@
+[0.000000] (-) TimerEvent: {}
+[0.000320] (auv_app) JobQueued: {'identifier': 'auv_app', 'dependencies': OrderedDict()}
+[0.000360] (auv_bringup) JobQueued: {'identifier': 'auv_bringup', 'dependencies': OrderedDict()}
+[0.000380] (auv_description) JobQueued: {'identifier': 'auv_description', 'dependencies': OrderedDict()}
+[0.000396] (auv_gazebo) JobQueued: {'identifier': 'auv_gazebo', 'dependencies': OrderedDict()}
+[0.000407] (auv_app) JobStarted: {'identifier': 'auv_app'}
+[0.006935] (auv_bringup) JobStarted: {'identifier': 'auv_bringup'}
+[0.009367] (auv_description) JobStarted: {'identifier': 'auv_description'}
+[0.013274] (auv_gazebo) JobStarted: {'identifier': 'auv_gazebo'}
+[0.099221] (-) TimerEvent: {}
+[0.168901] (auv_bringup) JobProgress: {'identifier': 'auv_bringup', 'progress': 'cmake'}
+[0.169525] (auv_bringup) JobProgress: {'identifier': 'auv_bringup', 'progress': 'build'}
+[0.169568] (auv_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/dev_ws/build/auv_bringup', '--', '-j5', '-l5'], 'cwd': '/home/ubuntu/dev_ws/build/auv_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONWARNINGS', 'ignore:setup.py install is deprecated::setuptools.command.install'), ('USER', 'ubuntu'), ('HOSTNAME', '8dd6b9d367ce'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.79.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('UBUNTU_MENUPROXY', '1'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ddb2ebbc1e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PASSWD', 'ubuntu'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/dev_ws/build/auv_bringup'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.171839] (auv_description) JobProgress: {'identifier': 'auv_description', 'progress': 'cmake'}
+[0.172056] (auv_description) JobProgress: {'identifier': 'auv_description', 'progress': 'build'}
+[0.172741] (auv_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/dev_ws/build/auv_description', '--', '-j5', '-l5'], 'cwd': '/home/ubuntu/dev_ws/build/auv_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONWARNINGS', 'ignore:setup.py install is deprecated::setuptools.command.install'), ('USER', 'ubuntu'), ('HOSTNAME', '8dd6b9d367ce'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.79.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('UBUNTU_MENUPROXY', '1'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ddb2ebbc1e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PASSWD', 'ubuntu'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/dev_ws/build/auv_description'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.175112] (auv_gazebo) JobProgress: {'identifier': 'auv_gazebo', 'progress': 'cmake'}
+[0.175698] (auv_gazebo) JobProgress: {'identifier': 'auv_gazebo', 'progress': 'build'}
+[0.176474] (auv_gazebo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/dev_ws/build/auv_gazebo', '--', '-j5', '-l5'], 'cwd': '/home/ubuntu/dev_ws/build/auv_gazebo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONWARNINGS', 'ignore:setup.py install is deprecated::setuptools.command.install'), ('USER', 'ubuntu'), ('HOSTNAME', '8dd6b9d367ce'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.79.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('UBUNTU_MENUPROXY', '1'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ddb2ebbc1e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PASSWD', 'ubuntu'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/dev_ws/build/auv_gazebo'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.199329] (-) TimerEvent: {}
+[0.202277] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.202655] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[0.202899] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[0.203161] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1-register -- found version 1.3.0\n'}
+[0.203510] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-register\n'}
+[0.203790] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 - found\n'}
+[0.203839] (auv_gazebo) StdoutLine: {'line': b'\n'}
+[0.204322] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-gazebo6 -- found version 6.11.0\n'}
+[0.204616] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gazebo6\n'}
+[0.204851] (auv_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.5.0\n'}
+[0.205154] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of sdformat12\n'}
+[0.208974] (auv_bringup) CommandEnded: {'returncode': 0}
+[0.210721] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[0.211444] (auv_description) CommandEnded: {'returncode': 0}
+[0.220778] (auv_gazebo) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[0.233083] (auv_bringup) JobProgress: {'identifier': 'auv_bringup', 'progress': 'install'}
+[0.242123] (auv_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/dev_ws/build/auv_bringup'], 'cwd': '/home/ubuntu/dev_ws/build/auv_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONWARNINGS', 'ignore:setup.py install is deprecated::setuptools.command.install'), ('USER', 'ubuntu'), ('HOSTNAME', '8dd6b9d367ce'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.79.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('UBUNTU_MENUPROXY', '1'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ddb2ebbc1e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PASSWD', 'ubuntu'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/dev_ws/build/auv_bringup'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.243062] (auv_description) JobProgress: {'identifier': 'auv_description', 'progress': 'install'}
+[0.243820] (auv_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/dev_ws/build/auv_description'], 'cwd': '/home/ubuntu/dev_ws/build/auv_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('PYTHONWARNINGS', 'ignore:setup.py install is deprecated::setuptools.command.install'), ('USER', 'ubuntu'), ('HOSTNAME', '8dd6b9d367ce'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.79.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'appmenu-gtk-module'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node'), ('LC_CTYPE', 'C.UTF-8'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('_colcon_cd_root', '/opt/ros/humble/'), ('UBUNTU_MENUPROXY', '1'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-ddb2ebbc1e.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PASSWD', 'ubuntu'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/dev_ws/build/auv_description'), ('XDG_DATA_DIRS', '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.253726] (auv_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.253898] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/launch\n'}
+[0.253958] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/launch/auv.launch.py\n'}
+[0.254070] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config\n'}
+[0.254222] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/ros_gz_example_bridge.yaml\n'}
+[0.254267] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/rover.rviz\n'}
+[0.254308] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/bridge.yaml\n'}
+[0.254357] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.254759] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/package_run_dependencies/auv_bringup\n'}
+[0.254818] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/parent_prefix_path/auv_bringup\n'}
+[0.254852] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.sh\n'}
+[0.254892] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.dsv\n'}
+[0.254930] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/path.sh\n'}
+[0.254969] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/path.dsv\n'}
+[0.255017] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.255051] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.bash\n'}
+[0.255296] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.sh\n'}
+[0.255358] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.zsh\n'}
+[0.255405] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.dsv\n'}
+[0.255592] (auv_bringup) StdoutLine: {'line': b'-- Installing: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/package.dsv\n'}
+[0.255667] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/packages/auv_bringup\n'}
+[0.255714] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/cmake/auv_bringupConfig.cmake\n'}
+[0.255888] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/cmake/auv_bringupConfig-version.cmake\n'}
+[0.255939] (auv_bringup) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/package.xml\n'}
+[0.255984] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.4.0\n'}
+[0.256040] (auv_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.256115] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[0.256151] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model\n'}
+[0.256215] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.xacro\n'}
+[0.256256] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.xml\n'}
+[0.256299] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.urdf\n'}
+[0.256333] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/materials.xacro\n'}
+[0.256436] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/auv_description.dsv\n'}
+[0.256481] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/auv_description.sh\n'}
+[0.256514] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/ament_index/resource_index/package_run_dependencies/auv_description\n'}
+[0.256570] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/ament_index/resource_index/parent_prefix_path/auv_description\n'}
+[0.256669] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/ament_prefix_path.sh\n'}
+[0.256793] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/ament_prefix_path.dsv\n'}
+[0.257700] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/path.sh\n'}
+[0.257764] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/path.dsv\n'}
+[0.257887] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/local_setup.bash\n'}
+[0.257968] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/local_setup.sh\n'}
+[0.258254] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/local_setup.zsh\n'}
+[0.258323] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/local_setup.dsv\n'}
+[0.258596] (auv_description) StdoutLine: {'line': b'-- Installing: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/package.dsv\n'}
+[0.258690] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.258780] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/ament_index/resource_index/packages/auv_description\n'}
+[0.258869] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/cmake/auv_descriptionConfig.cmake\n'}
+[0.258916] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/cmake/auv_descriptionConfig-version.cmake\n'}
+[0.259304] (auv_description) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/dev_ws/install/auv_description/share/auv_description/package.xml\n'}
+[0.259383] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[0.259472] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [loader]\n'}
+[0.259559] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1-loader -- found version 1.3.0\n'}
+[0.259622] (auv_bringup) CommandEnded: {'returncode': 0}
+[0.259763] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-loader\n'}
+[0.259813] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[0.259874] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.2.0\n'}
+[0.259938] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11\n'}
+[0.267037] (auv_description) CommandEnded: {'returncode': 0}
+[0.293904] (auv_bringup) JobEnded: {'identifier': 'auv_bringup', 'rc': 0}
+[0.297853] (auv_gazebo) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[0.299380] (-) TimerEvent: {}
+[0.301792] (auv_description) JobEnded: {'identifier': 'auv_description', 'rc': 0}
+[0.302049] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[0.312683] (auv_gazebo) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[0.346744] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[0.358255] (auv_gazebo) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[0.379234] (auv_app) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/auv_app', 'build', '--build-base', '/home/ubuntu/dev_ws/build/auv_app/build', 'install', '--record', '/home/ubuntu/dev_ws/build/auv_app/install.log', '--single-version-externally-managed'], 'cwd': '/home/ubuntu/dev_ws/src/auv_app', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'PYTHONWARNINGS': 'ignore:setup.py install is deprecated::setuptools.command.install', 'USER': 'ubuntu', 'HOSTNAME': '8dd6b9d367ce', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/helpers/browser.sh', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'TERM_PROGRAM_VERSION': '1.79.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-d7919b4f-3a46-418c-90f7-89228414d502.sock', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'appmenu-gtk-module', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/node', 'LC_CTYPE': 'C.UTF-8', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', '_colcon_cd_root': '/opt/ros/humble/', 'UBUNTU_MENUPROXY': '1', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/ubuntu/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock","/tmp/.X11-unix/X7"]', 'DISPLAY': ':7', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-ddb2ebbc1e.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-c54aa2e2-a8ce-4758-b252-157c19c4982d.sock', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X7', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PASSWD': 'ubuntu', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/dev_ws/build/auv_app', 'XDG_DATA_DIRS': '/usr/share/gnome:/home/ubuntu/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/dev_ws/build/auv_app/prefix_override:/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.387228] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.4.0\n'}
+[0.387597] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[0.387682] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-utils1> component [cli]\n'}
+[0.387876] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1-cli -- found version 1.4.0\n'}
+[0.388194] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1-cli\n'}
+[0.388713] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.6.0\n'}
+[0.388966] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs8\n'}
+[0.399634] (-) TimerEvent: {}
+[0.412998] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.432715] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [log]\n'}
+[0.432940] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11-log -- found version 11.2.0\n'}
+[0.433273] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-log\n'}
+[0.433879] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.6.0\n'}
+[0.434247] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.434434] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[0.434553] (auv_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.434603] (auv_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.441411] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [profiler]\n'}
+[0.441659] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-profiler -- found version 4.5.2\n'}
+[0.441996] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-profiler\n'}
+[0.442225] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[0.442496] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-events -- found version 4.5.2\n'}
+[0.442784] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-events\n'}
+[0.443050] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.443359] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [av]\n'}
+[0.443647] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-av -- found version 4.5.2\n'}
+[0.443940] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-av\n'}
+[0.447727] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[0.458181] (auv_gazebo) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[0.487386] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[0.498280] (auv_gazebo) StdoutLine: {'line': b'--   Found libavdevice , version 58.13.100\n'}
+[0.499746] (-) TimerEvent: {}
+[0.513914] (auv_app) StdoutLine: {'line': b'running egg_info\n'}
+[0.514334] (auv_app) StdoutLine: {'line': b'writing ../../build/auv_app/auv_app.egg-info/PKG-INFO\n'}
+[0.514660] (auv_app) StdoutLine: {'line': b'writing dependency_links to ../../build/auv_app/auv_app.egg-info/dependency_links.txt\n'}
+[0.514778] (auv_app) StdoutLine: {'line': b'writing entry points to ../../build/auv_app/auv_app.egg-info/entry_points.txt\n'}
+[0.514930] (auv_app) StdoutLine: {'line': b'writing requirements to ../../build/auv_app/auv_app.egg-info/requires.txt\n'}
+[0.515023] (auv_app) StdoutLine: {'line': b'writing top-level names to ../../build/auv_app/auv_app.egg-info/top_level.txt\n'}
+[0.515834] (auv_app) StdoutLine: {'line': b"reading manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'\n"}
+[0.516285] (auv_app) StdoutLine: {'line': b"writing manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'\n"}
+[0.516414] (auv_app) StdoutLine: {'line': b'running build\n'}
+[0.516454] (auv_app) StdoutLine: {'line': b'running build_py\n'}
+[0.516569] (auv_app) StdoutLine: {'line': b'running install\n'}
+[0.516690] (auv_app) StdoutLine: {'line': b'running install_lib\n'}
+[0.517306] (auv_app) StdoutLine: {'line': b'running install_data\n'}
+[0.517587] (auv_app) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.518511] (auv_app) StdoutLine: {'line': b"removing '/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.518796] (auv_app) StdoutLine: {'line': b'Copying ../../build/auv_app/auv_app.egg-info to /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app-0.0.0-py3.10.egg-info\n'}
+[0.519486] (auv_app) StdoutLine: {'line': b'running install_scripts\n'}
+[0.532821] (auv_app) StdoutLine: {'line': b'Installing my_node script to /home/ubuntu/dev_ws/install/auv_app/lib/auv_app\n'}
+[0.533117] (auv_app) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/dev_ws/build/auv_app/install.log'\n"}
+[0.535555] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[0.547271] (auv_gazebo) StdoutLine: {'line': b'--   Found libavformat, version 58.76.100\n'}
+[0.550622] (auv_app) CommandEnded: {'returncode': 0}
+[0.555006] (auv_app) JobEnded: {'identifier': 'auv_app', 'rc': 0}
+[0.579104] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[0.589691] (auv_gazebo) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[0.599914] (-) TimerEvent: {}
+[0.622954] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[0.632630] (auv_gazebo) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[0.660621] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools7 -- found version 7.1.0\n'}
+[0.660901] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools7\n'}
+[0.700120] (-) TimerEvent: {}
+[0.700456] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[0.712699] (auv_gazebo) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[0.746031] (auv_gazebo) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[0.758007] (auv_gazebo) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[0.783719] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.783904] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.784168] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.6.0\n'}
+[0.784933] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-gui6 -- found version 6.6.1\n'}
+[0.785225] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gui6\n'}
+[0.800593] (-) TimerEvent: {}
+[0.813243] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.813496] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.813767] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.814062] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.2.0\n'}
+[0.814378] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.5.1\n'}
+[0.814665] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-rendering6\n'}
+[0.814913] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.815182] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[0.815271] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-math6> component [eigen3]\n'}
+[0.815506] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6-eigen3 -- found version 6.12.0\n'}
+[0.815779] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6-eigen3\n'}
+[0.816790] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.817038] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[0.817152] (auv_gazebo) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[0.817210] (auv_gazebo) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[0.823801] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [graphics]\n'}
+[0.824137] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4-graphics -- found version 4.5.2\n'}
+[0.824482] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-graphics\n'}
+[0.824740] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.825016] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.4.0\n'}
+[0.825391] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[0.825875] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.826152] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[0.826226] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [all]\n'}
+[0.826447] (auv_gazebo) StdoutLine: {'line': b'-- Looking for all libraries of ignition-plugin1 -- found version 1.3.0\n'}
+[0.826754] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.828009] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.6.0\n'}
+[0.837757] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5 -- found version 5.2.0\n'}
+[0.838070] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5\n'}
+[0.838408] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.838718] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.3.0\n'}
+[0.839007] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.4.0\n'}
+[0.839781] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [heightmap]\n'}
+[0.840035] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-heightmap -- found version 5.2.0\n'}
+[0.840325] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-heightmap\n'}
+[0.840590] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.840865] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [mesh]\n'}
+[0.841112] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-mesh -- found version 5.2.0\n'}
+[0.841401] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-mesh\n'}
+[0.841650] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.841902] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [sdf]\n'}
+[0.842142] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-physics5-sdf -- found version 5.2.0\n'}
+[0.842422] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-sdf\n'}
+[0.842667] (auv_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.5.0\n'}
+[0.843200] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.6.0\n'}
+[0.843492] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6\n'}
+[0.867344] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.867582] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.5.2\n'}
+[0.867862] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.2.0\n'}
+[0.868147] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.5.1\n'}
+[0.868447] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.6.0\n'}
+[0.868727] (auv_gazebo) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.5.0\n'}
+[0.869155] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [air_pressure]\n'}
+[0.869478] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-air_pressure -- found version 6.6.0\n'}
+[0.869732] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-air_pressure\n'}
+[0.870029] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [altimeter]\n'}
+[0.870308] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-altimeter -- found version 6.6.0\n'}
+[0.870620] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-altimeter\n'}
+[0.870940] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [imu]\n'}
+[0.871194] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-imu -- found version 6.6.0\n'}
+[0.871479] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-imu\n'}
+[0.871783] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [force_torque]\n'}
+[0.872048] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-force_torque -- found version 6.6.0\n'}
+[0.872327] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-force_torque\n'}
+[0.872619] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [logical_camera]\n'}
+[0.872892] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-logical_camera -- found version 6.6.0\n'}
+[0.873166] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-logical_camera\n'}
+[0.873489] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [magnetometer]\n'}
+[0.873756] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-magnetometer -- found version 6.6.0\n'}
+[0.874033] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-magnetometer\n'}
+[0.874314] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [navsat]\n'}
+[0.874813] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-navsat -- found version 6.6.0\n'}
+[0.875136] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-navsat\n'}
+[0.875553] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rendering]\n'}
+[0.875801] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rendering -- found version 6.6.0\n'}
+[0.876084] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rendering\n'}
+[0.876417] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [lidar]\n'}
+[0.876671] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-lidar -- found version 6.6.0\n'}
+[0.876989] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-lidar\n'}
+[0.877397] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [gpu_lidar]\n'}
+[0.877706] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-gpu_lidar -- found version 6.6.0\n'}
+[0.878013] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-gpu_lidar\n'}
+[0.878396] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [camera]\n'}
+[0.878646] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-camera -- found version 6.6.0\n'}
+[0.878937] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-camera\n'}
+[0.879301] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [boundingbox_camera]\n'}
+[0.879543] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-boundingbox_camera -- found version 6.6.0\n'}
+[0.879870] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-boundingbox_camera\n'}
+[0.880189] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [segmentation_camera]\n'}
+[0.880416] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-segmentation_camera -- found version 6.6.0\n'}
+[0.880775] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-segmentation_camera\n'}
+[0.881146] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [depth_camera]\n'}
+[0.881439] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-depth_camera -- found version 6.6.0\n'}
+[0.881788] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-depth_camera\n'}
+[0.882127] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rgbd_camera]\n'}
+[0.882392] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rgbd_camera -- found version 6.6.0\n'}
+[0.882692] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rgbd_camera\n'}
+[0.883006] (auv_gazebo) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [thermal_camera]\n'}
+[0.883279] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-sensors6-thermal_camera -- found version 6.6.0\n'}
+[0.883635] (auv_gazebo) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-thermal_camera\n'}
+[0.884224] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.5.1\n'}
+[0.884507] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.12.0\n'}
+[0.884879] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.4.0\n'}
+[0.900734] (-) TimerEvent: {}
+[0.907016] (auv_gazebo) StdoutLine: {'line': b'-- Looking for ignition-gazebo6 - found\n'}
+[0.907106] (auv_gazebo) StdoutLine: {'line': b'\n'}
+[0.907350] (auv_gazebo) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:25 (ament_package):\n'}
+[0.907420] (auv_gazebo) StderrLine: {'line': b'  Unknown CMake command "ament_package".\n'}
+[0.907468] (auv_gazebo) StderrLine: {'line': b'\n'}
+[0.907558] (auv_gazebo) StderrLine: {'line': b'\x1b[0m\n'}
+[0.907597] (auv_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.907633] (auv_gazebo) StdoutLine: {'line': b'See also "/home/ubuntu/dev_ws/build/auv_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[0.913024] (auv_gazebo) StderrLine: {'line': b'gmake: *** [Makefile:228: cmake_check_build_system] Error 1\n'}
+[0.915174] (auv_gazebo) CommandEnded: {'returncode': 2}
+[0.941941] (auv_gazebo) JobEnded: {'identifier': 'auv_gazebo', 'rc': 2}
+[0.953018] (-) EventReactorShutdown: {}

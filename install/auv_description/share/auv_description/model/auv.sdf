@@ -1,0 +1,177 @@
+<sdf version='1.9'>
+  <model name='auv'>
+    <link name='dummy'>
+      <inertial>
+        <pose>-0.3731430303878355 0 -0.09328575759695888 0 0 0</pose>
+        <mass>2.1439499999999998</mass>
+        <inertia>
+          <ixx>0.1326718484806082</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.085371393922432912</ixz>
+          <iyy>0.76014542417033981</iyy>
+          <iyz>0</iyz>
+          <izz>0.83413157568973184</izz>
+        </inertia>
+      </inertial>
+      <collision name='dummy_fixed_joint_lump__base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.5</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='dummy_fixed_joint_lump__caster_link_collision_1'>
+        <pose>-0.8 0 -0.2 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.20000000000000001</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='dummy_fixed_joint_lump__base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.5</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+          <specular>1 0 0 1</specular>
+        </material>
+      </visual>
+      <visual name='dummy_fixed_joint_lump__caster_link_visual_1'>
+        <pose>-0.8 0 -0.2 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.20000000000000001</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <sensor name='imu_sensor' type='imu'>
+        <always_on>true</always_on>
+        <update_rate>1</update_rate>
+        <visualize>true</visualize>
+        <topic>imu</topic>
+        <pose>0 0 0 0 -0 0</pose>
+      </sensor>
+    </link>
+    <joint name='fl_joint' type='revolute'>
+      <pose relative_to='dummy'>0.5 -0.6 0 1.5707 0 0</pose>
+      <parent>dummy</parent>
+      <child>fl_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fl_link'>
+      <pose relative_to='fl_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.043333000000000003</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.043333000000000003</iyy>
+          <iyz>0</iyz>
+          <izz>0.080000000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='fl_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.20000000000000001</length>
+            <radius>0.40000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='fl_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.20000000000000001</length>
+            <radius>0.40000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='fr_joint' type='revolute'>
+      <pose relative_to='dummy'>0.5 0.6 0 1.5707 0 0</pose>
+      <parent>dummy</parent>
+      <child>fr_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='fr_link'>
+      <pose relative_to='fr_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.043333000000000003</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.043333000000000003</iyy>
+          <iyz>0</iyz>
+          <izz>0.080000000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='fr_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.20000000000000001</length>
+            <radius>0.40000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='fr_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.20000000000000001</length>
+            <radius>0.40000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <static>false</static>
+    <plugin name='ignition::gazebo::systems::DiffDrive' filename='ignition-gazebo-diff-drive-system'>
+      <left_joint>fl_joint</left_joint>
+      <right_joint>fr_joint</right_joint>
+      <wheel_separation>1</wheel_separation>
+      <wheel_radius>0.4</wheel_radius>
+      <odom_publish_frequency>1</odom_publish_frequency>
+      <topic>cmd_vel</topic>
+    </plugin>
+  </model>
+</sdf>

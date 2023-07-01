@@ -1,0 +1,5 @@
+[100%] Built target HelloWorld
+-- Install configuration: ""
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/world.sdf
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/hello_world_plugin.sdf

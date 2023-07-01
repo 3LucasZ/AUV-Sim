@@ -7,7 +7,8 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch_ros.parameter_descriptions import ParameterValue
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 
 from launch_ros.actions import Node
 
@@ -18,10 +19,14 @@ def generate_launch_description():
     pkg_project_description = get_package_share_directory("auv_description")
     pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")
 
-    # Load the URDF file from "description" package
-    urdf_file = os.path.join(pkg_project_description, "rover.urdf")
-    with open(urdf_file, "r") as infp:
-        robot_desc = infp.read()
+    # Load the urdf, xacro file from "description" package
+    path_to_xacro = os.path.join(pkg_project_description, "model", "auv.xacro")
+    path_to_urdf = os.path.join(pkg_project_description, "model", "auv.urdf")
+    # Convert xacro to urdf
+    os.system("xacro " + str(path_to_xacro) + " > " + str(path_to_urdf))
+    # Get robot description
+    with open(path_to_urdf, "r") as infp:
+        robot_description = infp.read()
 
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -32,6 +37,13 @@ def generate_launch_description():
         }.items(),
     )
 
+    spawn_robot = Node(
+        package="ros_ign_gazebo",
+        executable="create",
+        output="both",
+        arguments=["-file", path_to_urdf],
+    )
+
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -39,7 +51,7 @@ def generate_launch_description():
         output="both",
         parameters=[
             {"use_sim_time": True},
-            {"robot_description": robot_desc},
+            {"robot_description": robot_description},
         ],
     )
 
@@ -69,9 +81,10 @@ def generate_launch_description():
     return LaunchDescription(
         [
             gz_sim,
-            DeclareLaunchArgument(
-                "rviz", default_value="true", description="Open RViz."
-            ),
+            spawn_robot,
+            # DeclareLaunchArgument(
+            #     "rviz", default_value="true", description="Open RViz."
+            # ),
             bridge,
             robot_state_publisher,
             # rviz,

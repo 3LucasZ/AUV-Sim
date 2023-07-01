@@ -1,0 +1,27 @@
+-- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.6 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ubuntu/dev_ws/build/auv_bringup
+-- Install configuration: ""
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/launch
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/launch/auv.launch.py
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/ros_gz_example_bridge.yaml
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/rover.rviz
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/bridge.yaml
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/package_run_dependencies/auv_bringup
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/parent_prefix_path/auv_bringup
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.sh
+-- Installing: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/path.sh
+-- Installing: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/path.dsv
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.bash
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.sh
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.zsh
+-- Installing: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/local_setup.dsv
+-- Installing: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/package.dsv
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/packages/auv_bringup
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/cmake/auv_bringupConfig.cmake
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/cmake/auv_bringupConfig-version.cmake
+-- Up-to-date: /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/package.xml
