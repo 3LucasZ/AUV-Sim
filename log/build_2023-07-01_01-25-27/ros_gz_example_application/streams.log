@@ -1,0 +1,18 @@
+[0.018s] Invoking command in '/home/ubuntu/dev_ws/build/ros_gz_example_application': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/dev_ws/src/ros_gz_example_application -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/ubuntu/dev_ws/install/ros_gz_example_application
+[0.153s] -- The C compiler identification is GNU 11.3.0
+[0.250s] -- The CXX compiler identification is GNU 11.3.0
+[0.260s] -- Detecting C compiler ABI info
+[0.333s] -- Detecting C compiler ABI info - done
+[0.339s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.339s] -- Detecting C compile features
+[0.340s] -- Detecting C compile features - done
+[0.343s] -- Detecting CXX compiler ABI info
+[0.420s] -- Detecting CXX compiler ABI info - done
+[0.426s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.426s] -- Detecting CXX compile features
+[0.426s] -- Detecting CXX compile features - done
+[0.431s] -- Found ament_cmake: 1.3.4 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.562s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.703s] -- Configuring done
+[0.707s] -- Generating done
+[0.708s] -- Build files have been written to: /home/ubuntu/dev_ws/build/ros_gz_example_application
