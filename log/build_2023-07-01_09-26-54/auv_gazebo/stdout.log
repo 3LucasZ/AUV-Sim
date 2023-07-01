@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target HelloWorld[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/HelloWorld.dir/src/HelloWorld.cc.o[0m
+[100%] [32m[1mLinking CXX shared library libHelloWorld.so[0m
+[100%] Built target HelloWorld

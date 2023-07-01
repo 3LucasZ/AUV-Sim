@@ -1,0 +1,10 @@
+[0.157s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[0.234s] [ 50%] [32mBuilding CXX object CMakeFiles/HelloWorld.dir/HelloWorld.cc.o[0m
+[0.294s] [01m[K/home/ubuntu/dev_ws/src/auv_gazebo/HelloWorld.cc:21:10:[m[K [01;31m[Kfatal error: [m[Kgz/common/Console.hh: No such file or directory
+[0.294s]    21 | #include [01;31m[K<gz/common/Console.hh>[m[K
+[0.294s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.294s] compilation terminated.
+[0.296s] gmake[2]: *** [CMakeFiles/HelloWorld.dir/build.make:76: CMakeFiles/HelloWorld.dir/HelloWorld.cc.o] Error 1
+[0.296s] gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/HelloWorld.dir/all] Error 2
+[0.296s] gmake: *** [Makefile:91: all] Error 2
+[0.298s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5

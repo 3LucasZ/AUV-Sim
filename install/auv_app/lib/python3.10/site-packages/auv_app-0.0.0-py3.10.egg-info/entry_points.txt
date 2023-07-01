@@ -1,0 +1,3 @@
+[console_scripts]
+my_node = auv_app.my_node:main
+

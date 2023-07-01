@@ -1,0 +1,6 @@
+[0.154s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[0.191s] [35m[1mConsolidate compiler generated dependencies of target HelloWorld[0m
+[0.208s] [ 50%] [32mBuilding CXX object CMakeFiles/HelloWorld.dir/src/HelloWorld.cc.o[0m
+[2.250s] [100%] [32m[1mLinking CXX shared library libHelloWorld.so[0m
+[2.408s] [100%] Built target HelloWorld
+[2.420s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5

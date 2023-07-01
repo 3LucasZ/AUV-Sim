@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/auv_app/auv_app.egg-info
+writing ../../build/auv_app/auv_app.egg-info/PKG-INFO
+writing dependency_links to ../../build/auv_app/auv_app.egg-info/dependency_links.txt
+writing entry points to ../../build/auv_app/auv_app.egg-info/entry_points.txt
+writing requirements to ../../build/auv_app/auv_app.egg-info/requires.txt
+writing top-level names to ../../build/auv_app/auv_app.egg-info/top_level.txt
+writing manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'
+reading manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'
+writing manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ubuntu/dev_ws/build/auv_app/build
+creating /home/ubuntu/dev_ws/build/auv_app/build/lib
+creating /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app
+copying auv_app/__init__.py -> /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app
+copying auv_app/my_node.py -> /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app
+copying /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app/__init__.py -> /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app
+copying /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app/my_node.py -> /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app
+byte-compiling /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app/my_node.py to my_node.cpython-310.pyc
+running install_data
+creating /home/ubuntu/dev_ws/install/auv_app/share/ament_index
+creating /home/ubuntu/dev_ws/install/auv_app/share/ament_index/resource_index
+creating /home/ubuntu/dev_ws/install/auv_app/share/ament_index/resource_index/packages
+copying resource/auv_app -> /home/ubuntu/dev_ws/install/auv_app/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/dev_ws/install/auv_app/share/auv_app
+running install_egg_info
+Copying ../../build/auv_app/auv_app.egg-info to /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app-0.0.0-py3.10.egg-info
+running install_scripts
+Installing my_node script to /home/ubuntu/dev_ws/install/auv_app/lib/auv_app
+writing list of installed files to '/home/ubuntu/dev_ws/build/auv_app/install.log'

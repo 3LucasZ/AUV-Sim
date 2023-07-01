@@ -1,0 +1,3 @@
+/home/ubuntu/dev_ws/build/Hello_world/CMakeFiles/HelloWorld.dir
+/home/ubuntu/dev_ws/build/Hello_world/CMakeFiles/edit_cache.dir
+/home/ubuntu/dev_ws/build/Hello_world/CMakeFiles/rebuild_cache.dir

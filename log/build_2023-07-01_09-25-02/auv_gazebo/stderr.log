@@ -1,0 +1,17 @@
+[33mCMake Warning (dev) at CMakeLists.txt:13 (add_library):
+  Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  File:
+
+    /home/ubuntu/dev_ws/src/auv_gazebo/src/HelloWorld.cc
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/home/ubuntu/dev_ws/src/auv_gazebo/src/HelloWorld.cc:28:10:[m[K [01;31m[Kfatal error: [m[KHelloWorld.hh: No such file or directory
+   28 | #include [01;31m[K"HelloWorld.hh"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/HelloWorld.dir/build.make:76: CMakeFiles/HelloWorld.dir/src/HelloWorld.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/HelloWorld.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2

@@ -1,0 +1,1 @@
+Invoking command in '/home/ubuntu/dev_ws/build/auv_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/dev_ws/src/auv_bringup -DCMAKE_INSTALL_PREFIX=/home/ubuntu/dev_ws/install/auv_bringup

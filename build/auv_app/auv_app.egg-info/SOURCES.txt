@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/auv_app/auv_app.egg-info/PKG-INFO
+../../build/auv_app/auv_app.egg-info/SOURCES.txt
+../../build/auv_app/auv_app.egg-info/dependency_links.txt
+../../build/auv_app/auv_app.egg-info/entry_points.txt
+../../build/auv_app/auv_app.egg-info/requires.txt
+../../build/auv_app/auv_app.egg-info/top_level.txt
+../../build/auv_app/auv_app.egg-info/zip-safe
+auv_app/__init__.py
+auv_app/my_node.py
+resource/auv_app
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

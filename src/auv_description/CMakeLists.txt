@@ -11,8 +11,8 @@ endif()
 
 install(
   DIRECTORY
-    auv/
-  DESTINATION share/${PROJECT_NAME}/auv
+    model/
+  DESTINATION share/${PROJECT_NAME}/model
 )
 
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.in")
