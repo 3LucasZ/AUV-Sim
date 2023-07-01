@@ -1,7 +1,5 @@
 /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.xacro
 /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/inertial_macros.xacro
-/home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.sdf
-/home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/auv.urdf
 /home/ubuntu/dev_ws/install/auv_description/share/auv_description/model/materials.xacro
 /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/auv_description.dsv
 /home/ubuntu/dev_ws/install/auv_description/share/auv_description/environment/auv_description.sh

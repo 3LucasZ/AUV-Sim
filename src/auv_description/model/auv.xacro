@@ -64,7 +64,7 @@
 
   <!-- caster -->
   <link name="caster_link">
-    <xacro:inertial_sphere mass="0.1" radius="0.2">
+    <xacro:inertial_sphere mass="0.000001" radius="0.2">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertial_sphere>
     <visual>
