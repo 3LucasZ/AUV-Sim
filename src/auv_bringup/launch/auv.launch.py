@@ -41,7 +41,7 @@ def generate_launch_description():
         package="ros_ign_gazebo",
         executable="create",
         output="both",
-        arguments=["-file", path_to_urdf],
+        arguments=["-file", path_to_urdf, "-x", "0", "-y", "0", "-z", "3"],
     )
 
     robot_state_publisher = Node(

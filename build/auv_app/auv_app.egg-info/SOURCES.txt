@@ -9,7 +9,8 @@ setup.py
 ../../build/auv_app/auv_app.egg-info/top_level.txt
 ../../build/auv_app/auv_app.egg-info/zip-safe
 auv_app/__init__.py
-auv_app/my_node.py
+auv_app/pose_estimation.py
+auv_app/utils.py
 resource/auv_app
 test/test_copyright.py
 test/test_flake8.py

@@ -1,0 +1,24 @@
+[0.207s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[0.341s] [100%] Built target HelloWorld
+[0.362s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
+[0.426s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_gazebo
+[0.435s] -- Install configuration: ""
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/world.sdf
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/worlds/hello_world_plugin.sdf
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/package_run_dependencies/auv_gazebo
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/parent_prefix_path/auv_gazebo
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/ament_prefix_path.sh
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/ament_prefix_path.dsv
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/path.sh
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/environment/path.dsv
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.bash
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.sh
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.zsh
+[0.435s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/local_setup.dsv
+[0.435s] -- Installing: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/package.dsv
+[0.436s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/ament_index/resource_index/packages/auv_gazebo
+[0.436s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/cmake/auv_gazeboConfig.cmake
+[0.436s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/cmake/auv_gazeboConfig-version.cmake
+[0.436s] -- Up-to-date: /home/ubuntu/dev_ws/install/auv_gazebo/share/auv_gazebo/package.xml
+[0.441s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_gazebo

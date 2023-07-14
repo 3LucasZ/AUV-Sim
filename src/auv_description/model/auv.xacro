@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="auv">
+  <!-- settings -->
+  <xacro:property name="imuHz" value="100.0"/> 
   <!-- var -->
   <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
-  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="pi" value="3.1415926535897931"/>
   <!-- incl -->
   <xacro:include filename="${cwd}/materials.xacro" />
   <xacro:include filename="${cwd}/inertial_macros.xacro" />
@@ -99,7 +101,7 @@
   <gazebo reference="base_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
-      <update_rate>1</update_rate>
+      <update_rate>${imuHz}</update_rate>
       <visualize>true</visualize>
       <topic>imu</topic>
     </sensor>

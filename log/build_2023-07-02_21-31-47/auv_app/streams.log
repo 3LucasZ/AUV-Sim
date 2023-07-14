@@ -1,0 +1,24 @@
+[0.357s] Invoking command in '/home/ubuntu/dev_ws/src/auv_app': PYTHONPATH=/home/ubuntu/dev_ws/build/auv_app/prefix_override:/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/auv_app build --build-base /home/ubuntu/dev_ws/build/auv_app/build install --record /home/ubuntu/dev_ws/build/auv_app/install.log --single-version-externally-managed
+[0.484s] running egg_info
+[0.484s] writing ../../build/auv_app/auv_app.egg-info/PKG-INFO
+[0.484s] writing dependency_links to ../../build/auv_app/auv_app.egg-info/dependency_links.txt
+[0.485s] writing entry points to ../../build/auv_app/auv_app.egg-info/entry_points.txt
+[0.485s] writing requirements to ../../build/auv_app/auv_app.egg-info/requires.txt
+[0.485s] writing top-level names to ../../build/auv_app/auv_app.egg-info/top_level.txt
+[0.486s] reading manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'
+[0.486s] writing manifest file '../../build/auv_app/auv_app.egg-info/SOURCES.txt'
+[0.486s] running build
+[0.486s] running build_py
+[0.486s] copying auv_app/pose_estimation.py -> /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app
+[0.486s] running install
+[0.487s] running install_lib
+[0.487s] copying /home/ubuntu/dev_ws/build/auv_app/build/lib/auv_app/pose_estimation.py -> /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app
+[0.487s] byte-compiling /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app/pose_estimation.py to pose_estimation.cpython-310.pyc
+[0.488s] running install_data
+[0.488s] running install_egg_info
+[0.489s] removing '/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app-0.0.0-py3.10.egg-info' (and everything under it)
+[0.489s] Copying ../../build/auv_app/auv_app.egg-info to /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv_app-0.0.0-py3.10.egg-info
+[0.490s] running install_scripts
+[0.502s] Installing pose_estimation script to /home/ubuntu/dev_ws/install/auv_app/lib/auv_app
+[0.502s] writing list of installed files to '/home/ubuntu/dev_ws/build/auv_app/install.log'
+[0.518s] Invoked command in '/home/ubuntu/dev_ws/src/auv_app' returned '0': PYTHONPATH=/home/ubuntu/dev_ws/build/auv_app/prefix_override:/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/auv_app build --build-base /home/ubuntu/dev_ws/build/auv_app/build install --record /home/ubuntu/dev_ws/build/auv_app/install.log --single-version-externally-managed
