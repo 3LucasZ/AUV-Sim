@@ -1,0 +1,25 @@
+[0.500s] Invoking command in '/home/ubuntu/dev_ws/build/auv_app': PYTHONPATH=/home/ubuntu/dev_ws/build/auv_app/prefix_override:/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/dev_ws/build/auv_app/build --no-deps install_data
+[0.767s] running develop
+[0.769s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.769s]   warnings.warn(
+[0.813s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[0.813s]   warnings.warn(
+[0.814s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[0.814s]   warnings.warn(
+[0.814s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[0.814s]   warnings.warn(
+[0.882s] running egg_info
+[0.882s] writing auv_app.egg-info/PKG-INFO
+[0.882s] writing dependency_links to auv_app.egg-info/dependency_links.txt
+[0.882s] writing entry points to auv_app.egg-info/entry_points.txt
+[0.882s] writing requirements to auv_app.egg-info/requires.txt
+[0.882s] writing top-level names to auv_app.egg-info/top_level.txt
+[0.883s] reading manifest file 'auv_app.egg-info/SOURCES.txt'
+[0.884s] writing manifest file 'auv_app.egg-info/SOURCES.txt'
+[0.885s] running build_ext
+[0.885s] Creating /home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages/auv-app.egg-link (link to .)
+[0.886s] Installing pose_estimator script to /home/ubuntu/dev_ws/install/auv_app/lib/auv_app
+[0.886s] 
+[0.886s] Installed /home/ubuntu/dev_ws/build/auv_app
+[0.886s] running install_data
+[0.908s] Invoked command in '/home/ubuntu/dev_ws/build/auv_app' returned '0': PYTHONPATH=/home/ubuntu/dev_ws/build/auv_app/prefix_override:/home/ubuntu/dev_ws/install/auv_app/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuntu/dev_ws/build/auv_app/build --no-deps install_data

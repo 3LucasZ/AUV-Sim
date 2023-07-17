@@ -2,6 +2,16 @@ from geometry_msgs.msg import *
 from std_msgs.msg import *
 
 
+def dist(a: Point, b: Point) -> Float64:
+    ret = Float64()
+    ret.data = pow(pow(a.x - b.x, 2) + pow(a.y - b.y, 2) + pow(a.z - b.z, 2), 0.5)
+    return ret
+
+
+def floatEq(a, b):
+    return abs(a - b) < 0.00000000001
+
+
 def add(a: Vector3, b: Vector3) -> Vector3:
     ret = Vector3()
     ret.x = a.x + b.x

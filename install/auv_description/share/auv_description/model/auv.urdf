@@ -6,7 +6,7 @@
 <robot name="auv">
   <!-- Specify some standard inertial calculations https://en.wikipedia.org/wiki/List_of_moments_of_inertia -->
   <!-- base -->
-  <link name="dummy">
+  <link name="dummy_link">
   </link>
   <link name="base_link">
     <inertial>
@@ -25,7 +25,7 @@
     </collision>
   </link>
   <joint name="dummy_joint" type="fixed">
-    <parent link="dummy"/>
+    <parent link="dummy_link"/>
     <child link="base_link"/>
   </joint>
   <gazebo reference="base_link">
@@ -121,6 +121,29 @@
       <update_rate>100.0</update_rate>
       <visualize>true</visualize>
       <topic>imu</topic>
+      <angular_velocity>
+        <x>
+          <noise type="none"/>
+        </x>
+        <y>
+          <noise type="none"/>
+        </y>
+        <z>
+          <noise type="none"/>
+        </z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x>
+          <noise type="none"/>
+        </x>
+        <y>
+          <noise type="none"/>
+        </y>
+        <z>
+          <noise type="none"/>
+        </z>
+      </linear_acceleration>
+      <gaussian_noise>0.0</gaussian_noise>
     </sensor>
   </gazebo>
 </robot>

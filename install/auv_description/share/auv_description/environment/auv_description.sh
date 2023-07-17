@@ -1,2 +1,1 @@
-ament_prepend_unique_value GZ_SIM_RESOURCE_PATH "$AMENT_CURRENT_PREFIX/share/auv_description/models"
-
+/home/ubuntu/dev_ws/build/auv_description/ament_cmake_environment_hooks/auv_description.sh

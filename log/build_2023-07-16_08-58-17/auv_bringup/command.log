@@ -1,0 +1,4 @@
+Invoking command in '/home/ubuntu/dev_ws/build/auv_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_bringup -- -j5 -l5
+Invoked command in '/home/ubuntu/dev_ws/build/auv_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_bringup -- -j5 -l5
+Invoking command in '/home/ubuntu/dev_ws/build/auv_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_bringup
+Invoked command in '/home/ubuntu/dev_ws/build/auv_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/auv_bringup

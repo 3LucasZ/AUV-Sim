@@ -1,1 +1,1 @@
-prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share;/home/ubuntu/dev_ws/install/auv_description/share
+/home/ubuntu/dev_ws/build/auv_description/ament_cmake_environment_hooks/auv_description.dsv

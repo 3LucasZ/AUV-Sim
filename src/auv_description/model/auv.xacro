@@ -5,11 +5,12 @@
   <!-- var -->
   <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
   <xacro:property name="pi" value="3.1415926535897931"/>
+  <xacro:property name="dummy_link_name" value="dummy"/>
   <!-- incl -->
   <xacro:include filename="${cwd}/materials.xacro" />
   <xacro:include filename="${cwd}/inertial_macros.xacro" />
   <!-- base -->
-  <link name="dummy">
+  <link name="${dummy_link_name}">
   </link>
   <link name="base_link">
     <inertial>
@@ -28,7 +29,7 @@
     </collision>
   </link>
   <joint name="dummy_joint" type="fixed">
-     <parent link="dummy"/>
+     <parent link="${dummy_link_name}"/>
      <child link="base_link"/>
   </joint>
   <gazebo reference='base_link'>
@@ -104,6 +105,17 @@
       <update_rate>${imuHz}</update_rate>
       <visualize>true</visualize>
       <topic>imu</topic>
+      <angular_velocity>
+        <x><noise type="none"/></x>
+        <y><noise type="none"/></y>
+        <z><noise type="none"/></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="none"/></x>
+        <y><noise type="none"/></y>
+        <z><noise type="none"/></z>
+      </linear_acceleration>
+      <gaussian_noise>0.0</gaussian_noise>
     </sensor>
   </gazebo>
 </robot>
