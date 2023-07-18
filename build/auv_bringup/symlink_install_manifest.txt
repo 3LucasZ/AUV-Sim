@@ -2,7 +2,6 @@
 /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/bridge.yaml
 /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/default.rviz
 /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/ros_gz_example_bridge.yaml
-/home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/config/rover.rviz
 /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/package_run_dependencies/auv_bringup
 /home/ubuntu/dev_ws/install/auv_bringup/share/ament_index/resource_index/parent_prefix_path/auv_bringup
 /home/ubuntu/dev_ws/install/auv_bringup/share/auv_bringup/environment/ament_prefix_path.sh

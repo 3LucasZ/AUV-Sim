@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="auv">
   <!-- settings -->
-  <xacro:property name="imuHz" value="100.0"/> 
+  <xacro:property name="imuHz" value="300.0"/> 
   <!-- var -->
   <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
   <xacro:property name="pi" value="3.1415926535897931"/>
@@ -36,7 +36,7 @@
     <xacro:red/>
   </gazebo>
 
-  <!-- driving wheels -->
+  <!-- wheels -->
   <xacro:macro name="wheel" params="name x y">
     <link name="${name}_link">
       <inertial>
@@ -115,7 +115,6 @@
         <y><noise type="none"/></y>
         <z><noise type="none"/></z>
       </linear_acceleration>
-      <gaussian_noise>0.0</gaussian_noise>
     </sensor>
   </gazebo>
 </robot>

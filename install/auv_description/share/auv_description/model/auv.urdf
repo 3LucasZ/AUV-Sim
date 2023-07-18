@@ -118,7 +118,7 @@
   <gazebo reference="base_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
-      <update_rate>100.0</update_rate>
+      <update_rate>300.0</update_rate>
       <visualize>true</visualize>
       <topic>imu</topic>
       <angular_velocity>
@@ -143,7 +143,6 @@
           <noise type="none"/>
         </z>
       </linear_acceleration>
-      <gaussian_noise>0.0</gaussian_noise>
     </sensor>
   </gazebo>
 </robot>

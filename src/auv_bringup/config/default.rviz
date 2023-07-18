@@ -73,7 +73,7 @@ Visualization Manager:
       Axes Length: 1
       Axes Radius: 0.10000000149011612
       Class: rviz_default_plugins/Pose
-      Color: 255; 25; 0
+      Color: 26; 95; 180
       Enabled: true
       Head Length: 0.30000001192092896
       Head Radius: 0.10000000149011612
@@ -135,7 +135,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 15.967840194702148
+      Distance: 38.09451675415039
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -150,10 +150,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5153982043266296
+      Pitch: 0.2853987216949463
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.2922306060791016
+      Yaw: 2.922229766845703
     Saved: ~
 Window Geometry:
   Displays:
@@ -171,5 +171,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1595
-  X: 397
+  X: 323
   Y: 31

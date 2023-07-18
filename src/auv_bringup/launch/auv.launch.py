@@ -15,7 +15,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # --Param--
-    pose = [0, 0, 3, 0, 0, 0]  # xyz-rpy
+    init_pose = ["0", "0", "0.25", "0", "0", "0"]  # xyz-rpy
 
     # --Prelim--
     # Get important package directory paths
@@ -47,7 +47,16 @@ def generate_launch_description():
         package="ros_ign_gazebo",
         executable="create",
         output="both",
-        arguments=["-file", path_to_urdf, "-x", pose[0], "-y", pose[1], "-z", pose[2]],
+        arguments=[
+            "-file",
+            path_to_urdf,
+            "-x",
+            init_pose[0],
+            "-y",
+            init_pose[1],
+            "-z",
+            init_pose[2],
+        ],
     )
     # Robot state publisher
     robot_state_publisher = Node(
@@ -84,8 +93,10 @@ def generate_launch_description():
     )
 
     # --Nodes--
-    imuCorrector = Node(package="auv_app", executable="imu_corrector")
-    poseEstimator = Node(package="auv_app", executable="pose_estimator")
+    imuCorrector = Node(package="auv_app", executable="imu_corrector", output="screen")
+    poseEstimator = Node(
+        package="auv_app", executable="pose_estimator", output="screen"
+    )
 
     # --Post--
     return LaunchDescription(

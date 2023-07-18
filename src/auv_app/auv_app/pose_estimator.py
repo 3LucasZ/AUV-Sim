@@ -18,24 +18,24 @@ class PoseEstimator(Node):
         self.positionEstimateError = Float64()
 
         # settings
-        self.imuHz = 100.0
         self.pubPeriod = 0.01
         self.poseEstimate.header.frame_id = "dummy"
         self.poseEstimate.pose.position.x = 0.0
         self.poseEstimate.pose.position.y = 0.0
-        self.poseEstimate.pose.position.z = 0.0
+        self.poseEstimate.pose.position.z = 0.25
         self.pose.header.frame_id = "dummy"
 
         # setup
         self.linVelEstimate.x = 0.0
         self.linVelEstimate.y = 0.0
         self.linVelEstimate.z = 0.0
-        self.imuPeriod = 1.0 / self.imuHz
         super().__init__("pose_estimator")
-        self.imuSub = self.create_subscription(Imu, "/imu", self.imu_sub_cb, 10)
+        # sub
+        self.imuSub = self.create_subscription(Imu, "/imu_correct", self.imu_sub_cb, 10)
         self.odomSub = self.create_subscription(
             Odometry, "/model/auv/odometry", self.odom_sub_cb, 10
         )
+        # pub
         self.poseEstimatePub = self.create_publisher(
             PoseStamped, "/model/auv/pose_estimate", 10
         )
@@ -43,31 +43,28 @@ class PoseEstimator(Node):
         self.positionEstimateErrorPub = self.create_publisher(
             Float64, "/model/auv/position_estimate_error", 10
         )
+        # time
         self.timer = self.create_timer(self.pubPeriod, self.pub_cb)
+        self.imuTi = self.get_clock().now().nanoseconds
 
     def imu_sub_cb(self, msg: Imu):
-        # access
-        header = msg.header
-        ori = msg.orientation
-        linAcc = msg.linear_acceleration
+        # upd ti, tf, dt
+        imuTf = self.get_clock().now().nanoseconds
+        dt = (imuTf - self.imuTi) / 1e9
+        self.imuTi = imuTf
+        # self.get_logger().fatal("dt: " + str(dt))
 
-        # calibrate linAcc
-        linAcc = tf2_geometry_msgs.do_transform_vector3(
-            stampVector3(header, linAcc),
-            stampTransform(header, transformFromQuaternion(ori)),
-        ).vector
-        linAcc.z -= 9.79999999999996
-
-        # update linVel, pos, ori
+        # upd estimate
         dPos = add(
-            mult(self.linVelEstimate, self.imuPeriod),
-            mult(linAcc, self.imuPeriod * self.imuPeriod * 0.5),
+            mult(self.linVelEstimate, dt), mult(msg.linear_acceleration, dt * dt * 0.5)
         )
-        self.linVelEstimate = add(self.linVelEstimate, mult(linAcc, self.imuPeriod))
         self.poseEstimate.pose.position = Vector3ToPoint(
             add(self.poseEstimate.pose.position, dPos)
         )
-        self.poseEstimate.pose.orientation = ori
+        self.poseEstimate.pose.orientation = msg.orientation
+        self.linVelEstimate = add(
+            self.linVelEstimate, mult(msg.linear_acceleration, dt)
+        )
 
     def odom_sub_cb(self, msg: Odometry):
         # calculate scalar for error
@@ -79,6 +76,8 @@ class PoseEstimator(Node):
 
     def pub_cb(self):
         self.poseEstimate.header.stamp = self.get_clock().now().to_msg()
+        # cheat
+        self.poseEstimate.pose.position.z = 0.0
         self.poseEstimatePub.publish(self.poseEstimate)
         self.pose.header.stamp = self.get_clock().now().to_msg()
         self.posePub.publish(self.pose)
