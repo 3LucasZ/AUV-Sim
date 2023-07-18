@@ -1,1 +1,0 @@
-Invoking command in '/home/ubuntu/dev_ws/build/Hello_world': /usr/bin/cmake /home/ubuntu/dev_ws/src/hello_world -DCMAKE_INSTALL_PREFIX=/home/ubuntu/dev_ws/install/Hello_world

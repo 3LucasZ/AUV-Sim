@@ -1,4 +1,0 @@
-Invoking command in '/home/ubuntu/dev_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/ros_gz_example_description -- -j5 -l5
-Invoked command in '/home/ubuntu/dev_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/ros_gz_example_description -- -j5 -l5
-Invoking command in '/home/ubuntu/dev_ws/build/ros_gz_example_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/ros_gz_example_description
-Invoked command in '/home/ubuntu/dev_ws/build/ros_gz_example_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/dev_ws/build/ros_gz_example_description

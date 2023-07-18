@@ -1,3 +1,0 @@
-[0.208s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
-[0.269s] [100%] Built target HelloWorld
-[0.286s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5

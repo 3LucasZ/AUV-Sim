@@ -1,3 +1,0 @@
-[0.163s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
-[0.262s] [100%] Built target HelloWorld
-[0.283s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/dev_ws/install/auv_app:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5

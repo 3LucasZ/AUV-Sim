@@ -1,2 +1,0 @@
-prepend-non-duplicate;GZ_SIM_RESOURCE_PATH;share;/home/ubuntu/dev_ws/install/auv_description/share
-prepend-non-duplicate;IGN_GUI_PLUGIN_PATH;/usr/lib/aarch64-linux-gnu/ign-gui-6/plugins

@@ -1,1 +1,0 @@
-[0.161s] Invoking command in '/home/ubuntu/dev_ws/build/auv_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_description -- -j5 -l5

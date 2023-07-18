@@ -1,4 +1,0 @@
-[0.160s] Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5
-[0.199s] [35m[1mConsolidate compiler generated dependencies of target HelloWorld[0m
-[0.216s] [100%] Built target HelloWorld
-[0.228s] Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '0': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/auv_gazebo -- -j5 -l5

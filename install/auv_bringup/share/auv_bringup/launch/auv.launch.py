@@ -1,1 +1,0 @@
-/home/ubuntu/dev_ws/src/auv_bringup/launch/auv.launch.py

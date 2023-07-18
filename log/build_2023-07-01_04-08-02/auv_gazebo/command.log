@@ -1,2 +1,0 @@
-Invoking command in '/home/ubuntu/dev_ws/build/auv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/dev_ws/src/auv_gazebo -DCMAKE_INSTALL_PREFIX=/home/ubuntu/dev_ws/install/auv_gazebo
-Invoked command in '/home/ubuntu/dev_ws/build/auv_gazebo' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuntu/dev_ws/src/auv_gazebo -DCMAKE_INSTALL_PREFIX=/home/ubuntu/dev_ws/install/auv_gazebo

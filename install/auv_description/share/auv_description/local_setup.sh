@@ -1,1 +1,0 @@
-/home/ubuntu/dev_ws/build/auv_description/ament_cmake_environment_hooks/local_setup.sh

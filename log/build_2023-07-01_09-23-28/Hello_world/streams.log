@@ -1,5 +1,0 @@
-[0.020s] Invoking command in '/home/ubuntu/dev_ws/build/Hello_world': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/Hello_world -- -j5 -l5
-[0.171s] [0mCMake Error: The source directory "/home/ubuntu/dev_ws/src/hello_world" does not exist.
-[0.172s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.172s] gmake: *** [Makefile:179: cmake_check_build_system] Error 1
-[0.177s] Invoked command in '/home/ubuntu/dev_ws/build/Hello_world' returned '2': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/Hello_world -- -j5 -l5

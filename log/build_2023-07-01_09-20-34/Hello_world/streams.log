@@ -1,5 +1,0 @@
-[0.018s] Invoking command in '/home/ubuntu/dev_ws/build/Hello_world': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/Hello_world -- -j5 -l5
-[0.170s] [ 50%] [32mBuilding CXX object CMakeFiles/HelloWorld.dir/HelloWorld.cc.o[0m
-[2.073s] [100%] [32m[1mLinking CXX shared library libHelloWorld.so[0m
-[2.227s] [100%] Built target HelloWorld
-[2.238s] Invoked command in '/home/ubuntu/dev_ws/build/Hello_world' returned '0': /usr/bin/cmake --build /home/ubuntu/dev_ws/build/Hello_world -- -j5 -l5
