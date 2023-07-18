@@ -18,6 +18,9 @@ setup(
     license="TODO: License declaration",
     tests_require=["pytest"],
     entry_points={
-        "console_scripts": ["pose_estimator = auv_app.pose_estimator:main"],
+        "console_scripts": [
+            "pose_estimator = auv_app.pose_estimator:main",
+            "imu_corrector = auv_app.imu_corrector:main",
+        ],
     },
 )

@@ -14,12 +14,18 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    # --Param--
+    pose = [0, 0, 3, 0, 0, 0]  # xyz-rpy
+
+    # --Prelim--
+    # Get important package directory paths
     pkg_project_bringup = get_package_share_directory("auv_bringup")
     pkg_project_gazebo = get_package_share_directory("auv_gazebo")
     pkg_project_description = get_package_share_directory("auv_description")
     pkg_ros_gz_sim = get_package_share_directory("ros_gz_sim")
 
-    # Load the urdf, xacro file from "description" package
+    # --Gazebo--
+    # Get the path to the xacro and future urdf files from "description" package
     path_to_xacro = os.path.join(pkg_project_description, "model", "auv.xacro")
     path_to_urdf = os.path.join(pkg_project_description, "model", "auv.urdf")
     # Convert xacro to urdf
@@ -27,7 +33,7 @@ def generate_launch_description():
     # Get robot description
     with open(path_to_urdf, "r") as infp:
         robot_description = infp.read()
-
+    # Configure gz
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_ros_gz_sim, "launch", "gz_sim.launch.py")
@@ -36,14 +42,14 @@ def generate_launch_description():
             "gz_args": PathJoinSubstitution([pkg_project_gazebo, "worlds", "world.sdf"])
         }.items(),
     )
-
+    # Spawn urdf in gz
     spawn_robot = Node(
         package="ros_ign_gazebo",
         executable="create",
         output="both",
-        arguments=["-file", path_to_urdf, "-x", "0", "-y", "0", "-z", "3"],
+        arguments=["-file", path_to_urdf, "-x", pose[0], "-y", pose[1], "-z", pose[2]],
     )
-
+    # Robot state publisher
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
@@ -55,15 +61,7 @@ def generate_launch_description():
         ],
     )
 
-    # RViz
-    rviz = Node(
-        package="rviz2",
-        executable="rviz2",
-        arguments=["-d", os.path.join(pkg_project_bringup, "config", "rover.rviz")],
-        condition=IfCondition(LaunchConfiguration("rviz")),
-    )
-
-    # Bridge
+    # --Bridge--
     bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
@@ -78,15 +76,26 @@ def generate_launch_description():
         output="screen",
     )
 
+    # --RViz--
+    rviz2 = Node(
+        package="rviz2",
+        executable="rviz2",
+        arguments=["-d", os.path.join(pkg_project_bringup, "config", "default.rviz")],
+    )
+
+    # --Nodes--
+    imuCorrector = Node(package="auv_app", executable="imu_corrector")
+    poseEstimator = Node(package="auv_app", executable="pose_estimator")
+
+    # --Post--
     return LaunchDescription(
         [
             gz_sim,
             spawn_robot,
-            # DeclareLaunchArgument(
-            #     "rviz", default_value="true", description="Open RViz."
-            # ),
-            bridge,
             robot_state_publisher,
-            # rviz,
+            bridge,
+            rviz2,
+            imuCorrector,
+            poseEstimator,
         ]
     )

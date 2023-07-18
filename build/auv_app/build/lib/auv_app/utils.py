@@ -50,7 +50,7 @@ def stampQuaternion(header, quaternion):
     return ret
 
 
-def stampTransfrom(header, transform):
+def stampTransform(header, transform):
     ret = TransformStamped()
     ret.header = header
     ret.transform = transform

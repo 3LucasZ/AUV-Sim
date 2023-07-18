@@ -9,9 +9,14 @@ setup.py
 ../../build/auv_app/auv_app.egg-info/top_level.txt
 ../../build/auv_app/auv_app.egg-info/zip-safe
 auv_app/__init__.py
+auv_app/imu_corrector.py
 auv_app/pose_estimator.py
 auv_app/utils.py
+auv_app.egg-info/PKG-INFO
+auv_app.egg-info/SOURCES.txt
+auv_app.egg-info/dependency_links.txt
+auv_app.egg-info/entry_points.txt
+auv_app.egg-info/requires.txt
+auv_app.egg-info/top_level.txt
+auv_app.egg-info/zip-safe
 resource/auv_app
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

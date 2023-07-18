@@ -54,7 +54,7 @@ class PoseEstimator(Node):
         # calibrate linAcc
         linAcc = tf2_geometry_msgs.do_transform_vector3(
             stampVector3(header, linAcc),
-            stampTransfrom(header, transformFromQuaternion(ori)),
+            stampTransform(header, transformFromQuaternion(ori)),
         ).vector
         linAcc.z -= 9.79999999999996
 

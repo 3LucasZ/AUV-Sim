@@ -1,3 +1,4 @@
 [console_scripts]
+imu_corrector = auv_app.imu_corrector:main
 pose_estimator = auv_app.pose_estimator:main
 

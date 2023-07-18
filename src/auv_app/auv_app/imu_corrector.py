@@ -16,18 +16,13 @@ class ImuCorrector(Node):
         self.imuCorrectPub = self.create_publisher(Imu, "/imu_correct", 10)
 
     def imu_sub_cb(self, msg: Imu):
-        # access
-        header = msg.header
-        ori = msg.orientation
-        linAcc = msg.linear_acceleration
-
         # rotate by the orientation to assume flat on earth
         msg.linear_acceleration = tf2_geometry_msgs.do_transform_vector3(
-            stampVector3(header, linAcc),
-            stampTransform(header, transformFromQuaternion(ori)),
+            stampVector3(msg.header, msg.linear_acceleration),
+            stampTransform(msg.header, transformFromQuaternion(msg.orientation)),
         ).vector
         # remove gravity term
-        linAcc.z -= 9.79999999999996
+        msg.linear_acceleration.z -= 9.79999999999996
         # pub
         self.imuCorrectPub.publish(msg)
 

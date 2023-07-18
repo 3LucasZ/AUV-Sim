@@ -49,8 +49,8 @@
         <plugin filename="ignition-gazebo-imu-system"
             name="ignition::gazebo::systems::Imu">
         </plugin>
-
         
+        <!-- Misc -->
         <physics name="1ms" type="ignored">
             <max_step_size>0.001</max_step_size>
             <real_time_factor>1.0</real_time_factor>
