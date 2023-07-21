@@ -1,8 +1,5 @@
-#ros2 run ros_ign_bridge parameter_bridge --ros-args -p config_file:=bridge_config.yaml
-
-- topic_name: "chatter"
-  ros_type_name: "std_msgs/msg/String"
-  gz_type_name: "ignition.msgs.StringMsg"
+# Compatibility check: https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge
+# Proof read: make sure spelled correctly, right syntax, open and close "". Yaml won't check it for you! 
 
 - topic_name: "cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"
@@ -11,11 +8,20 @@
 - topic_name: "imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "gz.msgs.IMU"
-
-- topic_name: "imu_correct"
-  ros_type_name: "sensor_msgs/msg/Imu"
-  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
 
 - topic_name: "model/auv/odometry"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+- topic_name: "world/empty/pose/info"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "model/auv/raw_sim_pose"
+  gz_topic_name: "model/auv/pose"
+  ros_type_name: "geometry_msgs/msg/Pose"	
+  gz_type_name: "gz.msgs.Pose"
+  direction: GZ_TO_ROS

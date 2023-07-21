@@ -15,7 +15,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # --Param--
-    init_pose = ["0", "0", "0.25", "0", "0", "0"]  # xyz-rpy
+    init_pose = ["0", "0", "1", "0", "0", "0"]  # xyz-rpy
 
     # --Prelim--
     # Get important package directory paths
@@ -97,6 +97,7 @@ def generate_launch_description():
     poseEstimator = Node(
         package="auv_app", executable="pose_estimator", output="screen"
     )
+    simPosePublisher = Node(package="auv_app", executable="sim_pose_publisher")
 
     # --Post--
     return LaunchDescription(
@@ -106,7 +107,8 @@ def generate_launch_description():
             robot_state_publisher,
             bridge,
             rviz2,
-            imuCorrector,
-            poseEstimator,
+            # imuCorrector,
+            # poseEstimator,
+            simPosePublisher,
         ]
     )

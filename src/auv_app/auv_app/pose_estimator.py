@@ -19,11 +19,11 @@ class PoseEstimator(Node):
 
         # settings
         self.pubPeriod = 0.01
-        self.poseEstimate.header.frame_id = "dummy"
+        self.poseEstimate.header.frame_id = "base_link"
         self.poseEstimate.pose.position.x = 0.0
         self.poseEstimate.pose.position.y = 0.0
         self.poseEstimate.pose.position.z = 0.25
-        self.pose.header.frame_id = "dummy"
+        self.pose.header.frame_id = "base_link"
 
         # setup
         self.linVelEstimate.x = 0.0

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="auv">
   <!-- settings -->
-  <xacro:property name="imuHz" value="300.0"/> 
+  <xacro:property name="imuHz" value="50.0"/> 
   <!-- var -->
   <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
   <xacro:property name="pi" value="3.1415926535897931"/>
-  <xacro:property name="dummy_link_name" value="dummy"/>
+  <xacro:property name="dummy_link_name" value="dummy_link"/>
   <!-- incl -->
   <xacro:include filename="${cwd}/materials.xacro" />
   <xacro:include filename="${cwd}/inertial_macros.xacro" />
@@ -13,10 +13,9 @@
   <link name="${dummy_link_name}">
   </link>
   <link name="base_link">
-    <inertial>
-        <mass value="1.14395"/>
-        <inertia ixx="0.095329" ixy="0" ixz="0" iyy="0.381317" iyz="0" izz="0.476646"/>
-    </inertial>
+    <xacro:inertial_box mass="6" x="2.0" y="1.0" z="0.5">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:inertial_box>
     <visual>
       <geometry>
         <box size="2.0 1.0 0.5"/>
@@ -39,10 +38,9 @@
   <!-- wheels -->
   <xacro:macro name="wheel" params="name x y">
     <link name="${name}_link">
-      <inertial>
-        <mass value="1"/>
-        <inertia ixx="0.043333" ixy="0" ixz="0" iyy="0.043333" iyz="0" izz="0.08"/>
-      </inertial>
+      <xacro:inertial_cylinder mass="1" radius="0.4" length="0.2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:inertial_cylinder>
       <visual>
         <geometry>
           <cylinder radius="0.4" length="0.2"/>
@@ -64,10 +62,12 @@
 
   <xacro:wheel name="fl" x="0.5" y="-0.6"/>
   <xacro:wheel name="fr" x="0.5" y="0.6"/>
+  <!-- <xacro:wheel name="bl" x="-0.5" y="-0.6"/>
+  <xacro:wheel name="br" x="-0.5" y="0.6"/> -->
 
   <!-- caster -->
   <link name="caster_link">
-    <xacro:inertial_sphere mass="0.000001" radius="0.2">
+    <xacro:inertial_sphere mass="0.000000000000000000001" radius="0.2">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertial_sphere>
     <visual>
@@ -92,13 +92,27 @@
       filename="ignition-gazebo-diff-drive-system"
       name="ignition::gazebo::systems::DiffDrive">
       <left_joint>fl_joint</left_joint>
+      <!-- <left_joint>bl_joint</left_joint> -->
       <right_joint>fr_joint</right_joint>
+      <!-- <right_joint>br_joint</right_joint> -->
       <wheel_separation>1</wheel_separation>
       <wheel_radius>0.4</wheel_radius>
-      <odom_publish_frequency>1</odom_publish_frequency>
+      <odom_publish_frequency>${imuHz}</odom_publish_frequency>
       <topic>cmd_vel</topic>
     </plugin>
+    <plugin filename="ignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
+      <publish_link_pose>false</publish_link_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_sensor_pose>false</publish_sensor_pose>
+      <publish_nested_model_pose>true</publish_nested_model_pose>
+      <update_frequency>20</update_frequency>
+      <use_pose_vector_msg>false</use_pose_vector_msg>
+    </plugin>
   </gazebo>
+
+ 
+  <!-- sensors -->
   <gazebo reference="base_link">
     <sensor name="imu_sensor" type="imu">
       <always_on>1</always_on>
