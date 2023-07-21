@@ -58,7 +58,7 @@ class PoseEstimator(Node):
         dPos = add(
             mult(self.linVelEstimate, dt), mult(msg.linear_acceleration, dt * dt * 0.5)
         )
-        self.poseEstimate.pose.position = Vector3ToPoint(
+        self.poseEstimate.pose.position = pointFromVector3(
             add(self.poseEstimate.pose.position, dPos)
         )
         self.poseEstimate.pose.orientation = msg.orientation

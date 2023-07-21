@@ -5,19 +5,10 @@
   ros_type_name: "geometry_msgs/msg/Twist"
   gz_type_name: "gz.msgs.Twist"
 
-- topic_name: "imu"
+- ros_topic_name: "model/auv/raw_sim_imu"
+  gz_topic_name: "model/auv/imu"
   ros_type_name: "sensor_msgs/msg/Imu"
   gz_type_name: "gz.msgs.IMU"
-  direction: GZ_TO_ROS
-
-- topic_name: "model/auv/odometry"
-  ros_type_name: "nav_msgs/msg/Odometry"
-  gz_type_name: "gz.msgs.Odometry"
-  direction: GZ_TO_ROS
-
-- topic_name: "world/empty/pose/info"
-  ros_type_name: "tf2_msgs/msg/TFMessage"
-  gz_type_name: "gz.msgs.Pose_V"
   direction: GZ_TO_ROS
 
 - ros_topic_name: "model/auv/raw_sim_pose"

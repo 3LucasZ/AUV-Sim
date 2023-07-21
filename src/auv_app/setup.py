@@ -20,7 +20,7 @@ setup(
     entry_points={
         "console_scripts": [
             "pose_estimator = auv_app.pose_estimator:main",
-            "imu_corrector = auv_app.imu_corrector:main",
+            "imu_publisher = auv_app.imu_publisher:main",
             "sim_pose_publisher = auv_app.sim_pose_publisher:main",
         ],
     },

@@ -5,12 +5,11 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Grid1
         - /Imu1
+        - /Imu2
         - /Imu2/Box properties1
         - /Imu2/Axes properties1
         - /Imu2/Acceleration properties1
-        - /Pose3
       Splitter Ratio: 0.5
     Tree Height: 477
   - Class: rviz_common/Selection
@@ -50,48 +49,8 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 10
-      Reference Frame: dummy_link
+      Reference Frame: world
       Value: true
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 255; 25; 0
-      Enabled: false
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /model/auv/pose
-      Value: false
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 26; 95; 180
-      Enabled: false
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /model/auv/pose_estimate
-      Value: false
     - Acceleration properties:
         Acc. vector alpha: 1
         Acc. vector color: 255; 0; 0
@@ -109,7 +68,7 @@ Visualization Manager:
         y_scale: 1
         z_scale: 1
       Class: rviz_imu_plugin/Imu
-      Enabled: false
+      Enabled: true
       Name: Imu
       Topic:
         Depth: 5
@@ -117,9 +76,29 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /imu
-      Value: false
-      fixed_frame_orientation: false
+        Value: /model/auv/imu
+      Value: true
+      fixed_frame_orientation: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Arrow
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /model/auv/sim_pose
+      Value: true
     - Acceleration properties:
         Acc. vector alpha: 1
         Acc. vector color: 26; 95; 180
@@ -145,33 +124,13 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /imu_correct
+        Value: /model/auv/raw_imu
       Value: false
       fixed_frame_orientation: true
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 255; 25; 0
-      Enabled: true
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /model/auv/sim_pose
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: dummy_link
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -229,10 +188,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.2903975248336792
+      Pitch: 1.0303977727890015
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.11224102973938
+      Yaw: 2.937241554260254
     Saved: ~
 Window Geometry:
   Displays:
@@ -250,5 +209,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1005
-  X: 505
-  Y: 28
+  X: 855
+  Y: 82

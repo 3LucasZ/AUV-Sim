@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="auv">
   <!-- settings -->
-  <xacro:property name="imuHz" value="50.0"/> 
+  <xacro:property name="imuHz" value="20"/> 
   <!-- var -->
   <xacro:property name="cwd" value="/home/ubuntu/dev_ws/src/auv_description/model"/>
   <xacro:property name="pi" value="3.1415926535897931"/>
@@ -13,17 +13,17 @@
   <link name="${dummy_link_name}">
   </link>
   <link name="base_link">
-    <xacro:inertial_box mass="6" x="2.0" y="1.0" z="0.5">
+    <xacro:inertial_box mass="2" x="1.0" y="1.0" z="0.5">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:inertial_box>
     <visual>
       <geometry>
-        <box size="2.0 1.0 0.5"/>
+        <box size="1.0 1.0 0.5"/>
       </geometry>
     </visual>
     <collision>
       <geometry>
-        <box size="2.0 1.0 0.5"/>
+        <box size="1.0 1.0 0.5"/>
       </geometry>
     </collision>
   </link>
@@ -38,17 +38,17 @@
   <!-- wheels -->
   <xacro:macro name="wheel" params="name x y">
     <link name="${name}_link">
-      <xacro:inertial_cylinder mass="1" radius="0.4" length="0.2">
+      <xacro:inertial_cylinder mass="1.2" radius="0.3" length="0.2">
         <origin xyz="0 0 0" rpy="0 0 0"/>
       </xacro:inertial_cylinder>
       <visual>
         <geometry>
-          <cylinder radius="0.4" length="0.2"/>
+          <cylinder radius="0.3" length="0.2"/>
         </geometry>
       </visual>
       <collision>
         <geometry>
-          <cylinder radius="0.4" length="0.2"/>
+          <cylinder radius="0.3" length="0.2"/>
         </geometry>
       </collision>
     </link>
@@ -60,12 +60,12 @@
     </joint>
   </xacro:macro>
 
-  <xacro:wheel name="fl" x="0.5" y="-0.6"/>
-  <xacro:wheel name="fr" x="0.5" y="0.6"/>
+  <xacro:wheel name="fl" x="0" y="-0.6"/>
+  <xacro:wheel name="fr" x="0" y="0.6"/>
   <!-- <xacro:wheel name="bl" x="-0.5" y="-0.6"/>
   <xacro:wheel name="br" x="-0.5" y="0.6"/> -->
 
-  <!-- caster -->
+  <!-- caster
   <link name="caster_link">
     <xacro:inertial_sphere mass="0.000000000000000000001" radius="0.2">
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -85,7 +85,7 @@
     <origin xyz="-0.8 0 -0.2" rpy="0 0 0"/>
     <parent link="base_link"/>
     <child link="caster_link"/>
-  </joint>
+  </joint> -->
   <!-- plugins -->
   <gazebo>
     <plugin
@@ -96,7 +96,7 @@
       <right_joint>fr_joint</right_joint>
       <!-- <right_joint>br_joint</right_joint> -->
       <wheel_separation>1</wheel_separation>
-      <wheel_radius>0.4</wheel_radius>
+      <wheel_radius>0.3</wheel_radius>
       <odom_publish_frequency>${imuHz}</odom_publish_frequency>
       <topic>cmd_vel</topic>
     </plugin>
@@ -118,7 +118,7 @@
       <always_on>1</always_on>
       <update_rate>${imuHz}</update_rate>
       <visualize>true</visualize>
-      <topic>imu</topic>
+      <topic>model/auv/imu</topic>
       <angular_velocity>
         <x><noise type="none"/></x>
         <y><noise type="none"/></y>

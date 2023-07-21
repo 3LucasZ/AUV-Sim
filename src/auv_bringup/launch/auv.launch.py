@@ -93,7 +93,7 @@ def generate_launch_description():
     )
 
     # --Nodes--
-    imuCorrector = Node(package="auv_app", executable="imu_corrector", output="screen")
+    imuPublisher = Node(package="auv_app", executable="imu_publisher", output="screen")
     poseEstimator = Node(
         package="auv_app", executable="pose_estimator", output="screen"
     )
@@ -107,7 +107,7 @@ def generate_launch_description():
             robot_state_publisher,
             bridge,
             rviz2,
-            # imuCorrector,
+            imuPublisher,
             # poseEstimator,
             simPosePublisher,
         ]
