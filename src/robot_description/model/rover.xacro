@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
+  <!-- settings -->
+  <xacro:property name="IMU_HZ" value="100.0"/> 
+  <xacro:property name="POSE_HZ" value="100.0"/> 
+  <xacro:property name="WHEEL_RADIUS" value="0.3"/> 
+  <xacro:property name="WHEEL_LEN" value="0.3"/> 
+  <xacro:property name="SZ" value="1.0"/>
+  <!-- const -->
+  <xacro:property name="CWD" value="/home/ubuntu/dev_ws/src/robot_description"/>
+  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="DUMMY_LINK_NAME" value="base_footprint"/>
+  <!-- incl -->
+  <xacro:include filename="${CWD}/utils/materials.xacro" />
+  <xacro:include filename="${CWD}/utils/basic_links.xacro" />
+  <!-- dummy -->
+  <link name="${DUMMY_LINK_NAME}"/>
+  <!-- base -->
+  <xacro:box_link name="base_link" mass="2" x="${SZ}" y="${SZ}" z="${SZ/2}"/>
+  <joint name="dummy_joint" type="fixed">
+     <parent link="${DUMMY_LINK_NAME}"/>
+     <child link="base_link"/>
+  </joint>
+  <gazebo reference='base_link'>
+    <xacro:red/>
+  </gazebo>
+  <!-- wheels -->
+  <xacro:macro name="wheel" params="name x y">
+    <xacro:cylinder_link name="${name}_link" mass="1.2" radius="${WHEEL_RADIUS}" length="${WHEEL_LEN}"/>
+    <joint name="${name}_joint" type="continuous">
+      <origin xyz="${x} ${y} 0.0" rpy="${PI/2} 0.0 0.0"/>
+      <parent link="base_link"/>
+      <child link="${name}_link"/>
+      <axis xyz="0.0 0.0 1.0"/>
+    </joint>
+  </xacro:macro>
+  <xacro:wheel name="fl" x="0" y="0.6"/>
+  <xacro:wheel name="fr" x="0" y="-0.6"/>
+  <!-- caster -->
+  <!-- plugins -->
+  <gazebo>
+    <plugin
+      filename="ignition-gazebo-diff-drive-system"
+      name="ignition::gazebo::systems::DiffDrive">
+      <left_joint>fl_joint</left_joint>
+      <right_joint>fr_joint</right_joint>
+      <wheel_separation>1</wheel_separation>
+      <wheel_radius>${WHEEL_RADIUS}</wheel_radius>
+      <odom_publish_frequency>${IMU_HZ}</odom_publish_frequency>
+      <topic>cmd_vel</topic>
+    </plugin>
+    <plugin filename="ignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
+      <publish_link_pose>false</publish_link_pose>
+      <publish_collision_pose>false</publish_collision_pose>
+      <publish_visual_pose>false</publish_visual_pose>
+      <publish_sensor_pose>false</publish_sensor_pose>
+      <publish_nested_model_pose>true</publish_nested_model_pose>
+      <update_frequency>${POSE_HZ}</update_frequency>
+      <use_pose_vector_msg>false</use_pose_vector_msg>
+    </plugin>
+  </gazebo>
+  <!-- sensors -->
+  <gazebo reference="base_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>${IMU_HZ}</update_rate>
+      <visualize>true</visualize>
+      <topic>/model/rover/imu</topic>
+      <angular_velocity>
+        <x><noise type="none"/></x>
+        <y><noise type="none"/></y>
+        <z><noise type="none"/></z>
+      </angular_velocity>
+      <linear_acceleration>
+        <x><noise type="none"/></x>
+        <y><noise type="none"/></y>
+        <z><noise type="none"/></z>
+      </linear_acceleration>
+    </sensor>
+  </gazebo>
+</robot>
