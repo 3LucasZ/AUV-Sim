@@ -125,7 +125,7 @@ def generate_launch_description():
                 pkg_bringup,
                 "config",
                 model_filename + "_ekf.yaml",
-            )
+            ),
         ],
     )
     # --Post--

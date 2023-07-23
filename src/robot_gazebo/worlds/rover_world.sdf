@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <sdf version="1.9">
     <world name="rover_world">
-        <!-- Moving Forward-->
+        <!-- Forward-->
         <plugin filename="ignition-gazebo-triggered-publisher-system"
                 name="ignition::gazebo::systems::TriggeredPublisher">
             <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
@@ -12,7 +12,7 @@
             </output>
         </plugin>
 
-        <!-- Moving Forward-->
+        <!-- Backward-->
         <plugin filename="ignition-gazebo-triggered-publisher-system"
                 name="ignition::gazebo::systems::TriggeredPublisher">
             <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
@@ -27,7 +27,7 @@
         <plugin filename="ignition-gazebo-triggered-publisher-system"
                 name="ignition::gazebo::systems::TriggeredPublisher">
             <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-                <match field="data">16777236</match>
+                <match field="data">16777234</match>
             </input>
             <output type="ignition.msgs.Twist" topic="/cmd_vel">
                 linear: {x: 0}, angular: {z: 1}
@@ -38,13 +38,12 @@
         <plugin filename="ignition-gazebo-triggered-publisher-system"
                 name="ignition::gazebo::systems::TriggeredPublisher">
             <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-                <match field="data">16777234</match>
+                <match field="data">16777236</match>
             </input>
             <output type="ignition.msgs.Twist" topic="/cmd_vel">
                 linear: {x: 0}, angular: {z: -1}
             </output>
         </plugin>
-
 
         <!-- Circle FW CW  -->
         <plugin filename="ignition-gazebo-triggered-publisher-system"
@@ -53,7 +52,7 @@
                 <match field="data">16777248</match>
             </input>
             <output type="ignition.msgs.Twist" topic="/cmd_vel">
-                linear: {x: -2}, angular: {z: -1}
+                linear: {x: 2}, angular: {z: 1}
             </output>
         </plugin>
 
