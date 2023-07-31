@@ -32,6 +32,24 @@
     </xacro:macro>
 
     <!-- Basic link macros -->
+    <xacro:macro name="sphere_link" params="name mass radius">
+        <link name="${name}">
+            <xacro:inertial_sphere mass="${mass}" radius="${radius}">
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+            </xacro:inertial_sphere>
+            <visual>
+                <geometry>
+                    <sphere radius="${radius}"/>
+                </geometry>
+            </visual>
+            <collision>
+                <geometry>
+                    <sphere radius="${radius}"/>
+                </geometry>
+            </collision>
+        </link>
+    </xacro:macro>
+    
     <xacro:macro name="box_link" params="name mass x y z">
         <link name="${name}">
             <xacro:inertial_box mass="${mass}" x="${x}" y="${y}" z="${z}">

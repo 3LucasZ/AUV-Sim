@@ -5,9 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Imu1
         - /Imu1/Acceleration properties1
-        - /Odometry1
+        - /diff odom1/Shape1
       Splitter Ratio: 0.5
     Tree Height: 511
   - Class: rviz_common/Selection
@@ -77,34 +76,6 @@ Visualization Manager:
         Value: /imu
       Value: true
       fixed_frame_orientation: true
-    - Acceleration properties:
-        Acc. vector alpha: 1
-        Acc. vector color: 26; 95; 180
-        Acc. vector scale: 0.5
-        Derotate acceleration: true
-        Enable acceleration: true
-      Axes properties:
-        Axes scale: 1
-        Enable axes: true
-      Box properties:
-        Box alpha: 1
-        Box color: 26; 95; 180
-        Enable box: true
-        x_scale: 1
-        y_scale: 1
-        z_scale: 1
-      Class: rviz_imu_plugin/Imu
-      Enabled: false
-      Name: Imu
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /model/auv/raw_imu
-      Value: false
-      fixed_frame_orientation: true
     - Alpha: 1
       Axes Length: 1
       Axes Radius: 0.10000000149011612
@@ -113,7 +84,7 @@ Visualization Manager:
       Enabled: true
       Head Length: 0.30000001192092896
       Head Radius: 0.10000000149011612
-      Name: Pose
+      Name: true pose
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
       Shape: Arrow
@@ -125,26 +96,6 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /true_pose
       Value: true
-    - Alpha: 1
-      Axes Length: 1
-      Axes Radius: 0.10000000149011612
-      Class: rviz_default_plugins/Pose
-      Color: 26; 95; 180
-      Enabled: false
-      Head Length: 0.30000001192092896
-      Head Radius: 0.10000000149011612
-      Name: Pose
-      Shaft Length: 1
-      Shaft Radius: 0.05000000074505806
-      Shape: Arrow
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /model/auv/pose_estimate
-      Value: false
     - Angle Tolerance: 0.10000000149011612
       Class: rviz_default_plugins/Odometry
       Covariance:
@@ -164,7 +115,7 @@ Visualization Manager:
         Value: false
       Enabled: true
       Keep: 1
-      Name: Odometry
+      Name: ekf odom
       Position Tolerance: 0.10000000149011612
       Shape:
         Alpha: 1
@@ -201,15 +152,15 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: false
-      Keep: 10
-      Name: Odometry
+      Enabled: true
+      Keep: 5
+      Name: diff odom
       Position Tolerance: 0.10000000149011612
       Shape:
         Alpha: 1
         Axes Length: 1
         Axes Radius: 0.10000000149011612
-        Color: 255; 25; 0
+        Color: 249; 240; 107
         Head Length: 0.30000001192092896
         Head Radius: 0.10000000149011612
         Shaft Length: 1
@@ -222,7 +173,7 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -269,7 +220,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 7.329843521118164
+      Distance: 14.259474754333496
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -284,10 +235,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.28979727625846863
+      Pitch: 1.1747970581054688
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.0172624588012695
+      Yaw: 6.01226806640625
     Saved: ~
 Window Geometry:
   Displays:

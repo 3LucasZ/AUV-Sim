@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
+from nav_msgs.msg import Odometry
 from robot_app.utils import *
 
 
@@ -16,11 +17,23 @@ class TruePose(Node):
         # true_pose pub
         self.truePosePub = self.create_publisher(PoseStamped, "/true_pose", 10)
 
+        # true_odom pub
+        # self.trueOdomPub = self.create_publisher(Odometry, "/true_odom", 10)
+
     def sim_true_pose_sub_cb(self, msg: PoseStamped):
+        # pub true pose
         # correct header
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "world"
         self.truePosePub.publish(msg)
+
+        # pub true odom
+        # odomMsg = Odometry()
+        # odomMsg.header.stamp = self.get_clock().now().to_msg()
+        # odomMsg.header.frame_id = "odom"
+        # odomMsg.child_frame_id = "base_link"
+        # odomMsg.pose = msg.pose
+        # odomMsg.twist = msg.pose.
 
 
 # spin

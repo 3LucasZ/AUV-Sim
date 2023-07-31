@@ -2,10 +2,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
   <!-- settings -->
   <xacro:property name="IMU_HZ" value="100.0"/> 
+  <xacro:property name="ODOM_HZ" value="100.0"/> 
   <xacro:property name="POSE_HZ" value="100.0"/> 
   <xacro:property name="WHEEL_RADIUS" value="0.3"/> 
-  <xacro:property name="WHEEL_LEN" value="0.3"/> 
-  <xacro:property name="SZ" value="1.0"/>
+  <xacro:property name="WHEEL_THICKNESS" value="0.3"/> 
+  <xacro:property name="LEN" value="2.0"/>
+  <xacro:property name="WIDTH" value="1.0"/>
   <!-- const -->
   <xacro:property name="CWD" value="/home/ubuntu/dev_ws/src/robot_description"/>
   <xacro:property name="PI" value="3.1415926535897931"/>
@@ -16,7 +18,7 @@
   <!-- dummy -->
   <link name="${DUMMY_LINK_NAME}"/>
   <!-- base -->
-  <xacro:box_link name="base_link" mass="2" x="${SZ}" y="${SZ}" z="${SZ/2}"/>
+  <xacro:box_link name="base_link" mass="2" x="${LEN}" y="${WIDTH}" z="${WHEEL_RADIUS}"/>
   <joint name="dummy_joint" type="fixed">
      <parent link="${DUMMY_LINK_NAME}"/>
      <child link="base_link"/>
@@ -26,7 +28,7 @@
   </gazebo>
   <!-- wheels -->
   <xacro:macro name="wheel" params="name x y">
-    <xacro:cylinder_link name="${name}_link" mass="1.2" radius="${WHEEL_RADIUS}" length="${WHEEL_LEN}"/>
+    <xacro:cylinder_link name="${name}_link" mass="1.2" radius="${WHEEL_RADIUS}" length="${WHEEL_THICKNESS}"/>
     <joint name="${name}_joint" type="continuous">
       <origin xyz="${x} ${y} 0.0" rpy="${PI/2} ${PI} ${PI}"/>
       <parent link="base_link"/>
@@ -34,9 +36,19 @@
       <axis xyz="0.0 0.0 1.0"/>
     </joint>
   </xacro:macro>
-  <xacro:wheel name="fl" x="0" y="0.6"/>
-  <xacro:wheel name="fr" x="0" y="-0.6"/>
+  <xacro:wheel name="fl" x="${LEN/2-WHEEL_RADIUS}" y="${WIDTH/2+WHEEL_THICKNESS/2}"/>
+  <xacro:wheel name="fr" x="${LEN/2-WHEEL_RADIUS}" y="${-WIDTH/2-WHEEL_THICKNESS/2}"/>
   <!-- caster -->
+  <xacro:sphere_link name="caster_link" mass="1.2" radius="${WHEEL_RADIUS}"/>
+  <joint name="caster_joint" type="fixed">
+      <origin xyz="${-LEN/2+WHEEL_RADIUS} 0 0" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="caster_link"/>
+  </joint>
+  <gazebo reference="caster_link">
+    <mu1>0</mu1>
+    <mu2>0</mu2>
+  </gazebo>
   <!-- plugins -->
   <gazebo>
     <plugin
@@ -44,9 +56,9 @@
       name="ignition::gazebo::systems::DiffDrive">
       <left_joint>fl_joint</left_joint>
       <right_joint>fr_joint</right_joint>
-      <wheel_separation>1</wheel_separation>
+      <wheel_separation>${WIDTH}</wheel_separation>
       <wheel_radius>${WHEEL_RADIUS}</wheel_radius>
-      <odom_publish_frequency>${IMU_HZ}</odom_publish_frequency>
+      <odom_publish_frequency>${ODOM_HZ}</odom_publish_frequency>
       <topic>cmd_vel</topic>
     </plugin>
     <plugin filename="ignition-gazebo-pose-publisher-system" name="ignition::gazebo::systems::PosePublisher">
