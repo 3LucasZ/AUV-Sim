@@ -18,6 +18,13 @@ class Odom(Node):
         t.child_frame_id = "odom"
         self.tfStaticBroadcaster.sendTransform(t)
 
+        # set init transform odom -> base_link so that ekf can initialize
+        # t = TransformStamped()
+        # t.header.stamp = self.get_clock().now().to_msg()
+        # t.header.frame_id = "odom"
+        # t.child_frame_id = "base_link"
+        # self.tfStaticBroadcaster.sendTransform(t)
+
         # odom_sim sub
         self.odomSimSub = self.create_subscription(
             Odometry, "odom_sim", self.odom_sim_sub_cb, 10
@@ -28,7 +35,7 @@ class Odom(Node):
         self.odomPub = self.create_publisher(Odometry, "odom", 10)
 
     def odom_sim_sub_cb(self, msg: Odometry):
-        # correct header
+        # pub odom
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = "odom"
         msg.child_frame_id = "base_link"

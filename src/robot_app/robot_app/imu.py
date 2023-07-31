@@ -14,7 +14,7 @@ class Imu(Node):
         self.tf_static_broadcaster = StaticTransformBroadcaster(self)
         t = TransformStamped()
         t.header.stamp = self.get_clock().now().to_msg()
-        t.header.frame_id = "world"
+        t.header.frame_id = "base_link"
         t.child_frame_id = "imu_sensor"
         self.tf_static_broadcaster.sendTransform(t)
 
