@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.9">
+<sdf version="1.6">
     <world name="rover_world">
         <!-- Forward-->
         <plugin filename="ignition-gazebo-triggered-publisher-system"
@@ -56,14 +56,6 @@
             </output>
         </plugin>
 
-        <!-- Sensors -->
-        <plugin filename="ignition-gazebo-imu-system"
-            name="ignition::gazebo::systems::Imu">
-        </plugin>
-        <plugin filename="ignition-gazebo-navsat-system"
-            name="ignition::gazebo::systems::NavSat">
-        </plugin>
-
         <!-- Helper/Verbose -->
         <plugin
             filename="ignition-gazebo-user-commands-system"
@@ -73,6 +65,7 @@
             filename="ignition-gazebo-scene-broadcaster-system"
             name="ignition::gazebo::systems::SceneBroadcaster">
         </plugin>
+
         <!-- Physics -->
         <physics name="1ms" type="ignored">
             <max_step_size>0.01</max_step_size>
@@ -86,6 +79,15 @@
             filename="ignition-gazebo-contact-system"
             name="ignition::gazebo::systems::Contact">
         </plugin>
+
+				<!-- Sensors -->
+        <plugin filename="ignition-gazebo-imu-system"
+            name="ignition::gazebo::systems::Imu">
+        </plugin>
+        <plugin filename="OdometerSystem"
+            name="custom::OdometerSystem">
+        </plugin>
+
         <!-- Environment -->
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>
@@ -125,6 +127,44 @@
                 </material>
                 </visual>
             </link>     
+        </model>
+        <model name="HAOQIU">
+            <pose>0 0 0.05 0 0 0</pose>
+            <link name="GUPPY">
+                <inertial>
+                <mass>0.1</mass>
+                <inertia>
+                    <ixx>0.000166667</ixx>
+                    <iyy>0.000166667</iyy>
+                    <izz>0.000166667</izz>
+                </inertia>
+                </inertial>
+                <collision name="collision">
+                <geometry>
+                    <box>
+                    <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+                </collision>
+                <visual name="visual">
+                <geometry>
+                    <box>
+                    <size>0.1 0.1 0.1</size>
+                    </box>
+                </geometry>
+                </visual>
+                <sensor name="SODIUM" type="custom" ignition:type="odometer">
+                <always_on>1</always_on>
+                <update_rate>1.0</update_rate>
+                <visualize>true</visualize>
+                <ignition:odometer>
+                    <noise type="gaussian">
+                    <mean>0.00001</mean>
+                    <stddev>0.00001</stddev>
+                    </noise>
+                </ignition:odometer>
+                </sensor>
+            </link>
         </model>
     </world>
 </sdf>

@@ -1,0 +1,3 @@
+add_subdirectory(HelloWorld)
+add_subdirectory(custom_sensor)
+add_subdirectory(custom_sensor_system)

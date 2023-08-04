@@ -25,7 +25,7 @@
 #include <ignition/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "../include/HelloWorld.hh"
+#include "HelloWorld.hh"
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
