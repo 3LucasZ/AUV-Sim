@@ -93,7 +93,7 @@
     </sensor>
   </gazebo>
   <gazebo reference="base_link">
-    <sensor name="LUCAS_ODOMETER" type="custom" ignition:type="odometer">
+    <sensor name="odometer" type="custom" ignition:type="odometer">
       <always_on>1</always_on>
       <update_rate>30</update_rate>
       <visualize>true</visualize>

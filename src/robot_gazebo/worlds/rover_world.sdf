@@ -80,7 +80,7 @@
             name="ignition::gazebo::systems::Contact">
         </plugin>
 
-				<!-- Sensors -->
+		<!-- Sensors -->
         <plugin filename="ignition-gazebo-imu-system"
             name="ignition::gazebo::systems::Imu">
         </plugin>
@@ -127,44 +127,6 @@
                 </material>
                 </visual>
             </link>     
-        </model>
-        <model name="HAOQIU">
-            <pose>0 0 0.05 0 0 0</pose>
-            <link name="GUPPY">
-                <inertial>
-                <mass>0.1</mass>
-                <inertia>
-                    <ixx>0.000166667</ixx>
-                    <iyy>0.000166667</iyy>
-                    <izz>0.000166667</izz>
-                </inertia>
-                </inertial>
-                <collision name="collision">
-                <geometry>
-                    <box>
-                    <size>0.1 0.1 0.1</size>
-                    </box>
-                </geometry>
-                </collision>
-                <visual name="visual">
-                <geometry>
-                    <box>
-                    <size>0.1 0.1 0.1</size>
-                    </box>
-                </geometry>
-                </visual>
-                <sensor name="SODIUM" type="custom" ignition:type="odometer">
-                <always_on>1</always_on>
-                <update_rate>1.0</update_rate>
-                <visualize>true</visualize>
-                <ignition:odometer>
-                    <noise type="gaussian">
-                    <mean>0.00001</mean>
-                    <stddev>0.00001</stddev>
-                    </noise>
-                </ignition:odometer>
-                </sensor>
-            </link>
         </model>
     </world>
 </sdf>
