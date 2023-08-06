@@ -15,10 +15,10 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     # --Param--
+    world_filename = "odometer"  # auto push_back .sdf
     init_pose = ["0", "0", "1", "0", "0", "0"]  # xyz-rpy
-    world_filename = "rover_world"  # auto push_back .sdf
     model_filename = (
-        "rover"  # auto sufpent .xacro, .urdf, _bridge.yaml, _ekf.yaml, .rviz
+        "bluerov2_heavy"  # auto sufpent .xacro, .urdf, _bridge.yaml, _ekf.yaml, .rviz
     )
     dummy_filename = "dummy"
     ign_verbose_level = 1
@@ -162,7 +162,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             gz_sim_alt,
-            spawn_robot,
+            # spawn_robot,
             # spawn_dummy,
             # robot_state_publisher,
             bridge,

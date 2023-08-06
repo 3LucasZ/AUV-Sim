@@ -87,6 +87,9 @@
         <plugin filename="OdometerSystem"
             name="custom::OdometerSystem">
         </plugin>
+        <plugin filename="X150System"
+            name="custom::X150System">
+        </plugin>
 
         <!-- Environment -->
         <light type="directional" name="sun">

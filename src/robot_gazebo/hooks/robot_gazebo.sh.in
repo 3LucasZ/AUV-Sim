@@ -1,2 +1,5 @@
 ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/custom_sensor_system"
 ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/custom_sensor"
+
+ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/X150_system"
+ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/X150"

@@ -36,6 +36,8 @@ bool Odometer::Load(const sdf::Sensor &_sdf)
     ignerr << "Trying to load [odometer] sensor, but got type ["
            << type << "] instead." << std::endl;
     return false;
+  } else {
+    ignerr << "Successfully loaded type [" << type << "]" << std::endl;
   }
 
   // Load common sensor params

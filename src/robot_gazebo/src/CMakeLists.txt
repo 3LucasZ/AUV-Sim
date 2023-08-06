@@ -1,3 +1,5 @@
 add_subdirectory(HelloWorld)
 add_subdirectory(custom_sensor)
 add_subdirectory(custom_sensor_system)
+add_subdirectory(X150)
+add_subdirectory(X150_system)
