@@ -84,9 +84,9 @@
         <plugin filename="ignition-gazebo-imu-system"
             name="ignition::gazebo::systems::Imu">
         </plugin>
-        <plugin filename="OdometerSystem"
+        <!-- <plugin filename="OdometerSystem"
             name="custom::OdometerSystem">
-        </plugin>
+        </plugin> -->
         <plugin filename="X150System"
             name="custom::X150System">
         </plugin>

@@ -27,7 +27,7 @@
 
 using namespace custom;
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////***
 bool X150::Load(const sdf::Sensor &_sdf) {
   // Only load type X150
   auto type = ignition::sensors::customType(_sdf);
@@ -40,7 +40,7 @@ bool X150::Load(const sdf::Sensor &_sdf) {
   // Load common sensor params
   ignition::sensors::Sensor::Load(_sdf);
   // Advertise topic where data will be published
-  this->pub = this->node.Advertise<ignition::msgs::Double>(this->Topic());
+  this->pub = this->node.Advertise<ignition::msgs::Vector3d>(this->Topic());
   if (!_sdf.Element()->HasElement("ignition:X150")) {
     ignerr << "No custom configuration for [" << this->Topic() << "]" << std::endl;
     return true;
@@ -49,7 +49,7 @@ bool X150::Load(const sdf::Sensor &_sdf) {
   auto customElem = _sdf.Element()->GetElement("ignition:X150");
   // Load noise
   if (!customElem->HasElement("noise")){
-    ignerr << "No noise for [" << this->Topic() << "] (fatal)" << std::endl;
+    ignerr << "No noise for [" << this->Topic() << "] (fatal)" << std::endl; 
     return false;
   } else {
     sdf::Noise noiseSdf;
@@ -81,19 +81,35 @@ bool X150::Load(const sdf::Sensor &_sdf) {
     }
     ignerr << customX110PoseCfg << std::endl;
   }
+  ignerr << "Successfully configured X150" << std::endl;
   return true;
 }
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////***
 bool X150::Update(const std::chrono::steady_clock::duration &_now) {
-  ignition::msgs::Pose msg;
+  //if (NextDataUpdateTime()>_now) return true; (Useless)
+  ignition::msgs::Vector3d msg; //Range bearing: azi, elevation, range from X150 to X110
+
   *msg.mutable_header()->mutable_stamp() = ignition::msgs::Convert(_now);
   auto frame = msg.mutable_header()->add_data();
   frame->set_key("frame_id");
   frame->add_value(this->Name());
 
-  // this->curPose.Pos->X = this->noise->Apply(this->totalDistance);
-  // msg.set_data(this->totalDistance);
+  double dx = this->X110Pose.X() - this->curPose.X();
+  double dy = this->X110Pose.Y() - this->curPose.Y();
+  double dz = this->X110Pose.Z() - this->curPose.Y();
+  
+  double r = sqrt(dx * dx + dy * dy + dz * dz);
+  double az = atan2(dy, dx);
+  double el = acos(dz / r);
+
+  double nr = this->noise->Apply(r);
+  double naz = this->noise->Apply(az);
+  double nel = this->noise->Apply(el); 
+
+  msg.set_x(nr);
+  msg.set_y(naz);
+  msg.set_z(nel);
 
   this->AddSequence(msg.mutable_header());
   this->pub.Publish(msg);
@@ -101,7 +117,7 @@ bool X150::Update(const std::chrono::steady_clock::duration &_now) {
   return true;
 }
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////***
 void X150::SetPose(const ignition::math::Pose3d &_pose) {
   this->curPose = _pose;
 }

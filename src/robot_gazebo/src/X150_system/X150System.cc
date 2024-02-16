@@ -43,6 +43,11 @@ void X150System::PreUpdate(const ignition::gazebo::UpdateInfo &, ignition::gazeb
           data.SetTopic(topic);
         }
 
+        // Default to 1 as update_rate (useless)
+        if (data.UpdateRate()<0.001){
+          data.SetUpdateRate(1.0);
+        }
+
         ignition::sensors::SensorFactory sensorFactory;
         auto sensor = sensorFactory.CreateSensor<custom::X150>(data);
         if (nullptr == sensor){
@@ -64,13 +69,13 @@ void X150System::PreUpdate(const ignition::gazebo::UpdateInfo &, ignition::gazeb
       });
 }
 
-//////////////////////////////////////////////////
+//////////////////////////////////////////////////***
 void X150System::PostUpdate(const ignition::gazebo::UpdateInfo &_info, const ignition::gazebo::EntityComponentManager &_ecm) {
   // Only update and publish if not paused.
   if (!_info.paused) {
     for (auto &[entity, sensor] : this->entitySensorMap) {
       sensor->SetPose(ignition::gazebo::worldPose(entity, _ecm));
-      sensor->Update(_info.simTime);
+      sensor->Update(_info.simTime); 
     }
   }
   this->RemoveSensorEntities(_ecm);

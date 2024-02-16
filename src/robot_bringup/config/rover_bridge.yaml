@@ -1,5 +1,10 @@
 # Compatibility check: https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge
 # Proof read: make sure spelled correctly, right syntax, open and close "". Yaml won't check it for you! 
+- gz_topic_name: "model/rover/X150"
+  ros_topic_name: "X150_sim"
+  ros_type_name: "geometry_msgs/msg/Vector3"
+  gz_type_name: "gz.msgs.Vector3d"
+  direction: GZ_TO_ROS
 
 - topic_name: "cmd_vel"
   ros_type_name: "geometry_msgs/msg/Twist"

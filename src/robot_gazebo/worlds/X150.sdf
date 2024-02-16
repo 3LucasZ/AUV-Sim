@@ -90,7 +90,7 @@
           <visualize>true</visualize>
           <ignition:X150>
             <noise type="gaussian">
-              <mean>0.00001</mean>
+              <mean>0.00001</mean> 
               <stddev>0.00001</stddev>
             </noise>
             <X110pose>0 0 0 0 0 0</X110pose>

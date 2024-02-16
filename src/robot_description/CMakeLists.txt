@@ -12,18 +12,17 @@ endif()
 # Download all models
 install(
   DIRECTORY
-    model/
-  DESTINATION share/${PROJECT_NAME}/model
+    models/
+  DESTINATION share/${PROJECT_NAME}/models
 )
 
 # Download ROV model
-install(
-  DIRECTORY
-   model/bluerov2_heavy/model.sdf
-   DESTINATION share/${PROJECT_NAME}/model/bluerov2_heavy.xacro
-)
+# install(
+#   DIRECTORY
+#    model/bluerov2_heavy/model.sdf
+#    DESTINATION share/${PROJECT_NAME}/model/bluerov2_heavy.xacro
+# )
 
-ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.in")
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.sh.in")
 
 ament_package()

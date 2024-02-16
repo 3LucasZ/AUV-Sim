@@ -3,3 +3,5 @@ ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/bu
 
 ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/X150_system"
 ament_prepend_unique_value IGN_GAZEBO_SYSTEM_PLUGIN_PATH "/home/ubuntu/dev_ws/build/robot_gazebo/src/X150"
+
+ament_prepend_unique_value IGN_GAZEBO_RESOURCE_PATH "/home/ubuntu/dev_ws/src/robot_gazebo/worlds"

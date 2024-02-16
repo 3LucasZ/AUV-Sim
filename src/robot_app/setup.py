@@ -24,6 +24,8 @@ setup(
             "imu = robot_app.imu:main",
             "odom = robot_app.odom:main",
             "true_pose = robot_app.true_pose:main",
+            "X150_status_pub = robot_app.X150_status_pub:main",
+            "range_bearing_pub = robot_app.range_bearing_pub:main",
         ],
     },
 )
