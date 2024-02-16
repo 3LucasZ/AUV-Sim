@@ -6,7 +6,7 @@
 <sdf version="1.6">
   <model name="bluerov2_heavy">
     <pose>0 0 0 0 0 0</pose>
-
+ 
     <!-- BlueROV2 thruster reference: http://www.ardusub.com/introduction/features.html -->
 
     <link name="base_link">
@@ -439,7 +439,7 @@
       <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000.0</fluid_density>
       <propeller_diameter>0.1</propeller_diameter>
-      <velocity_control>true</velocity_control>
+      <velocity_control>True</velocity_control>
       <use_angvel_cmd>False</use_angvel_cmd>
     </plugin>
   </model>
