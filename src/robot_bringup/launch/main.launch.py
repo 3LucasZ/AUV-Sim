@@ -14,15 +14,19 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    # --Param--
-    world_name = "rover_world"
+    # --World Param--
+    world_names = ["bluerov2_heavy_underwater", "rover_world"]
+    model_names = ["bluerov2_heavy", "rover", "rov"]
+    world_name = "bluerov2_heavy_underwater" # change 
+    model_name = "rov" # auto push_back .xacro, .urdf, _bridge.yaml, _ekf.yaml, .rviz
+    convert = False  # set convert to true if xacro -> urdf -> sdf
+
+    # --Other Param--
     init_pose = ["0", "0", "2", "0", "0", "0"]  # xyz-rpy -> z is most important!
-    # auto push_back .xacro, .urdf, _bridge.yaml, _ekf.yaml, .rviz
-    model_name = "rover"
     model_nested = False  # Weird one, remember this!
-    convert = True  # set convert to true if xacro -> urdf -> sdf
     ign_verbose_level = 2  # usually 2 or 3 is good
     # spawn_model, world, gz_simt MUST be enabled at bare minimum
+    spawn_enabled = False
     bridge_enabled = True
     robot_state_publisher_enabled = False
     rviz2_enabled = False
@@ -81,7 +85,8 @@ def generate_launch_description():
             init_pose[2],
         ],
     )
-    run.append(spawn_robot)
+    if (spawn_enabled):
+        run.append(spawn_robot)
 
     # --Start state Publisher--
     # GZ -> Ros, Robot tf2 state publisher

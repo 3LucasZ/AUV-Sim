@@ -19,8 +19,8 @@ install(
 # Download ROV model
 # install(
 #   DIRECTORY
-#    model/bluerov2_heavy/model.sdf
-#    DESTINATION share/${PROJECT_NAME}/model/bluerov2_heavy.xacro
+#    models/bluerov2_heavy/
+#   DESTINATION share/${PROJECT_NAME}/models
 # )
 
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.sh.in")

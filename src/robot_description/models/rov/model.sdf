@@ -4,11 +4,9 @@
 <!-- Remove ArduPilotPlugin COMPLETELY-->
 <!-- Add X150 Plugin -->
 <sdf version="1.6">
-  <model name="bluerov2_heavy">
+  <model name="rov">
     <pose>0 0 0 0 0 0</pose>
-
     <!-- BlueROV2 thruster reference: http://www.ardusub.com/introduction/features.html -->
-
     <link name="base_link">
       <inertial>
         <pose>0.0 0.0 0.011 0 0 0</pose>
@@ -25,10 +23,9 @@
 
       <visual name="base_link_visual">
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/bluerov2_heavy.dae</uri>
-            <scale>0.025 0.025 0.025</scale>
-          </mesh>
+          <box>
+            <size>0.457 0.575 0.05</size>
+          </box>
         </geometry>
       </visual>
 
@@ -42,7 +39,7 @@
         </geometry>
       </collision>
 
-      <!-- IMU sensor gyro and accel data will be sent to ArduSub -->
+      <!-- IMU sensor gyro and accel data -->
       <sensor name="imu_sensor" type="imu">
         <!-- Transform from the Gazebo body frame (x-forward, y-left, z-up)
              to the ArduPilot body frame (x-forward, y-right, z-down) -->
@@ -55,7 +52,7 @@
         <always_on>0</always_on>
         <update_rate>0.1</update_rate>
         <visualize>true</visualize>
-        <topic>/model/bluerov2_heavy/X150_sim</topic>
+        <topic>/model/rov/X150_sim</topic>
         <ignition:X150>
           <noise type="gaussian">
             <mean>0.00001</mean>
@@ -100,9 +97,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.571 0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_ccw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -123,9 +120,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.571 0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_ccw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -146,9 +143,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 1.571 0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_cw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -169,9 +166,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 1.571 0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_cw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -192,9 +189,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.571 0 1.571</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_ccw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -215,9 +212,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 1.571 0 1.571</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_cw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -238,9 +235,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 1.571 0 1.571</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_cw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -261,9 +258,9 @@
       <visual name="thruster_prop_visual">
         <pose>0 0 0 -1.571 0 1.571</pose>
         <geometry>
-          <mesh>
-            <uri>model://bluerov2_heavy/meshes/t200_ccw_prop.dae</uri>
-          </mesh>
+          <box>
+            <size>0.2 0.2 0.03</size>
+          </box>
         </geometry>
       </visual>
       <inertial>
@@ -346,7 +343,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster1_joint</joint_name>
       <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000.0</fluid_density> 
@@ -358,7 +355,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster2_joint</joint_name>
       <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000.0</fluid_density>
@@ -370,7 +367,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster3_joint</joint_name>
       <!-- Reverse spin to balance torque -->
       <thrust_coefficient>-0.02</thrust_coefficient>
@@ -383,7 +380,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster4_joint</joint_name>
       <!-- Reverse spin to balance torque -->
       <thrust_coefficient>-0.02</thrust_coefficient>
@@ -396,7 +393,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster5_joint</joint_name>
       <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000.0</fluid_density>
@@ -408,7 +405,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster6_joint</joint_name>
       <!-- Reverse spin to balance torque -->
       <thrust_coefficient>-0.02</thrust_coefficient>
@@ -421,7 +418,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster7_joint</joint_name>
       <!-- Reverse spin to balance torque -->
       <thrust_coefficient>-0.02</thrust_coefficient>
@@ -434,7 +431,7 @@
     <plugin
         filename="ignition-gazebo-thruster-system"
         name="ignition::gazebo::systems::Thruster">
-      <namespace>bluerov2_heavy</namespace>
+      <namespace>rov</namespace>
       <joint_name>thruster8_joint</joint_name>
       <thrust_coefficient>0.02</thrust_coefficient>
       <fluid_density>1000.0</fluid_density>

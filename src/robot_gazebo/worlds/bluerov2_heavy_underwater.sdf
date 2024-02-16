@@ -27,8 +27,6 @@
       name="custom::X150System">
     </plugin>
 
-
-
     <!-- Buoyancy plugin manages buoyancy for all models -->
     <plugin
         filename="ignition-gazebo-buoyancy-system"
@@ -42,7 +40,8 @@
         </density_change>
       </graded_buoyancy>
       <!-- Enable by model name -->
-      <enable>bluerov2_heavy</enable>
+      <!-- <enable>bluerov2_heavy</enable> -->
+      <enable>rov</enable>
     </plugin>
  
     <include>
@@ -54,10 +53,10 @@
       <pose>0 7 -10 0 0 0</pose>
     </include> -->
 
-    <!-- <include>
-      <uri>model://bluerov2_heavy</uri>
-      <pose>0 0 -2 0 0 0</pose>
-    </include> -->
+    <include>
+      <uri>model://rov</uri>
+      <pose>0 0 -0.2 0 0 0</pose>
+    </include>
 
     <include>
       <uri>model://axes</uri>
