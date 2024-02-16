@@ -1,8 +1,8 @@
 # Compatibility check: https://github.com/gazebosim/ros_gz/tree/ros2/ros_gz_bridge
 # Proof read: make sure spelled correctly, right syntax, open and close "". Yaml won't check it for you! 
 
-# ign topic -t /model/rov/joint/thruster1_joint/cmd_thrust -m ignition.msgs.Double -p 'data: 100000000'
-# ros2 topic pub /thruster1  std_msgs/msg/Float64 "{data: 0}"
+# ign topic -t /model/rov/joint/thruster1_joint/cmd_thrust -m ignition.msgs.Double -p 'data: 200'
+# ros2 topic pub /thruster1  std_msgs/msg/Float64 "{data: 5}"
 
 - gz_topic_name: "model/rov/X150_sim"
   ros_topic_name: "X150_sim"
